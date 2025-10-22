@@ -1,0 +1,178 @@
+
+# ============================
+# === Deaktivierte Original-Bindings ===
+# Diese deaktivieren Standard-Verknüpfungen aus der Caelestia-Konfiguration
+# ============================
+
+# Launcher (ursprünglich: bind = Super, Super_L, ...)
+unbind = Super, Super_L
+
+# Lock (ursprünglich: bind = $kbLock, global, caelestia:lock)
+unbind = $kbLock
+# Alternativ direkt:
+# unbind = Super, L
+
+# Todo Toggle
+unbind = $kbTodo
+# Alternativ:
+# unbind = Super, R
+
+# Panels
+unbind = $kbShowPanels
+# Alternativ:
+# unbind = Super, K
+
+# Sleep (ursprünglich: bind = Super+Shift, L)
+unbind = Super+Shift, L
+
+# Terminal (ursprünglich: bind = Super, T)
+unbind = $kbTerminal
+# Alternativ:
+# unbind = Super, T
+
+# Alternativ:
+# unbind = Super, D
+
+# Lautstärke erhöhen/verringern
+unbind = , XF86AudioRaiseVolume
+unbind = , XF86AudioLowerVolume
+
+
+
+# ============================
+# === Custom Keybind Overrides ===
+# ============================
+
+# Launcher: Von Super+Super_L zu Super+D geändert
+bind = Super, D, global, caelestia:launcher
+
+# Lock auskommentiert (deaktiviert)
+# bind = $kbLock, global, caelestia:lock
+
+# Todo deaktiviert
+# bind = $kbTodo, exec, caelestia toggle todo
+
+# Fokus bewegen mit HJKL (vim-style)
+bind = Super, H, movefocus, l
+bind = Super, J, movefocus, d
+bind = Super, K, movefocus, u
+bind = Super, L, movefocus, r
+
+# Fenster verschieben mit Shift+HJKL
+bind = Super+Shift, H, movewindow, l
+bind = Super+Shift, J, movewindow, d
+bind = Super+Shift, K, movewindow, u
+bind = Super+Shift, L, movewindow, r
+
+$wsaction=/home/mathis/.config/caelestia/scriptFIX.fish
+
+# === Move to Workspace with Super+Shift+[1–0]
+bind = Super+Shift, 1, exec, $wsaction movetoworkspace 1
+bind = Super+Shift, 2, exec, $wsaction movetoworkspace 2
+bind = Super+Shift, 3, exec, $wsaction movetoworkspace 3
+bind = Super+Shift, 4, exec, $wsaction movetoworkspace 4
+bind = Super+Shift, 5, exec, $wsaction movetoworkspace 5
+bind = Super+Shift, 6, exec, $wsaction movetoworkspace 6
+bind = Super+Shift, 7, exec, $wsaction movetoworkspace 7
+bind = Super+Shift, 8, exec, $wsaction movetoworkspace 8
+bind = Super+Shift, 9, exec, $wsaction movetoworkspace 9
+bind = Super+Shift, 0, exec, $wsaction movetoworkspace 10
+
+# === Move to Workspace Group with Ctrl+Super+Shift+[1–0]
+bind = Ctrl+Super+Shift, 1, exec, $wsaction -g movetoworkspace 1
+bind = Ctrl+Super+Shift, 2, exec, $wsaction -g movetoworkspace 2
+bind = Ctrl+Super+Shift, 3, exec, $wsaction -g movetoworkspace 3
+bind = Ctrl+Super+Shift, 4, exec, $wsaction -g movetoworkspace 4
+bind = Ctrl+Super+Shift, 5, exec, $wsaction -g movetoworkspace 5
+bind = Ctrl+Super+Shift, 6, exec, $wsaction -g movetoworkspace 6
+bind = Ctrl+Super+Shift, 7, exec, $wsaction -g movetoworkspace 7
+bind = Ctrl+Super+Shift, 8, exec, $wsaction -g movetoworkspace 8
+bind = Ctrl+Super+Shift, 9, exec, $wsaction -g movetoworkspace 9
+bind = Ctrl+Super+Shift, 0, exec, $wsaction -g movetoworkspace 10
+
+# Custom Hyprsunset-Toggle
+bind = Ctrl+Alt, S, exec, hyprsunset-toggle
+
+# Lautstärke-Bindings deaktiviert
+# bindle = , XF86AudioRaiseVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0; wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ $volumeStep%+
+# bindle = , XF86AudioLowerVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0; wpctl set-volume @DEFAULT_AUDIO_SINK@ $volumeStep%-
+
+# Sleep deaktiviert
+# bind = Super+Shift, L, exec, systemctl suspend-then-hibernate
+
+
+
+# ============================
+# === User Overrides aus variables.conf ===
+# ============================
+
+# Apps
+$browser = firefox
+$editor = vim
+
+# Gaps
+$windowGapsOut = 30
+
+# Keybinds – Workspaces
+$kbMoveWinToWs = Super+Shift
+# Keybinds – Window Management
+$kbWindowFullscreen = Super+Alt, F
+$kbWindowBorderedFullscreen = Super, F
+$kbToggleWindowFloating = Super, Space
+
+# Keybinds – Special Workspace Toggles
+
+# Keybinds – Apps
+$kbTerminal = Super, Return
+
+# Keybinds – Misc
+$kbShowPanels = Super+Alt, K
+# $kbLock = Super+Alt, L  # Auskommentiert = deaktiviert
+
+
+
+# ============================
+# === Spezielle Bindings & Execs ===
+# ============================
+
+# OBS - eigenes Keybinding für Super+G, vorher unbind um Konflikte zu vermeiden
+unbind = Super, G
+bind = Super, G, exec, app2unit -- obs
+
+# browser
+unbind = Super, W
+bind = $kbBrowser, exec, app2unit -- $browser
+
+unbind = Super, C 
+$kbCommunication = Super, C
+bind = $kbCommunication, exec, caelestia toggle communication
+# Execs
+exec-once = hyprsunset
+
+
+
+# ============================
+# === Input Settings ===
+# ============================
+
+input {
+    kb_layout = de
+    numlock_by_default = true
+}
+
+
+
+# ============================
+# === Monitor Settings ===
+# ============================
+
+monitor = DP-1, 2560x1440@180, 1920x0, 1, vrr, 0
+monitor = HDMI-A-1, 1920x1080@144, 0x0, 1, vrr, 0
+
+
+
+# ============================
+# === Weitere Quellen ===
+# ============================
+
+source = $hl/workspaces.conf

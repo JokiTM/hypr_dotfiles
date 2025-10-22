@@ -4,7 +4,7 @@ echo "Installing caelestia dotfiles"
 echo "Downloading repo"
 git clone https://github.com/caelestia-dots/caelestia.git ~/.local/share/caelestia
 echo "Installing dots"
-~/.local/share/caelestia/install.fish --spotify --discord --noconfirm
+~/.local/share/caelestia/install.fish --spotify --discord --vscode=code --aur-helper=yay --noconfirm
 
 echo "Finished installing caelestia dotifles"
 

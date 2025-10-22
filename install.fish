@@ -1,5 +1,8 @@
 #!/usr/bin/env fish
 
+echo "Installing yay"
+sudo pacman -S yay
+
 echo "Installing caelestia dotfiles"
 echo "Downloading repo"
 git clone https://github.com/caelestia-dots/caelestia.git ~/.local/share/caelestia
@@ -13,5 +16,7 @@ echo "Installing personalized dots"
 echo "Installing caelestia and hyprland dots..."
 cp -r caelestia ~/.config/
 
+echo "Installing NeoVim"
+sudo pacman -S neovim
 echo "Installing nvim dots..."
 cp -r nvim ~/.config/

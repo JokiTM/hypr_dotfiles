@@ -3,6 +3,9 @@
 echo "Installing yay"
 sudo pacman -S yay
 
+echo "Updating the System"
+yay --noconfirm
+
 echo "Installing caelestia dotfiles"
 echo "Downloading repo"
 git clone https://github.com/caelestia-dots/caelestia.git ~/.local/share/caelestia
@@ -20,3 +23,4 @@ echo "Installing NeoVim"
 sudo pacman -S neovim
 echo "Installing nvim dots..."
 cp -r nvim ~/.config/
+echo "Finished."

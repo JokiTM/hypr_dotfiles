@@ -17,10 +17,10 @@ echo "Finished installing caelestia dotifles"
 echo "Installing personalized dots"
 
 echo "Installing caelestia and hyprland dots..."
-cp -r caelestia ~/.config/
+ln -s ~/.local/share/dots/caelestia ~/.config/caelestia
 
 echo "Installing NeoVim"
 sudo pacman -S neovim --noconfirm
 echo "Installing nvim dots..."
-cp -r nvim ~/.config/
+ln -s ~/.local/share/dots/nvim ~/.config/nvim
 echo "Finished."

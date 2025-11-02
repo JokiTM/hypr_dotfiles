@@ -237,8 +237,9 @@
         "poweroff"
       ],
       "hibernate": [
-        "systemctl",
-        "hibernate"
+        "sh",
+        "-c",
+        "caelestia shell lock lock && sleep 3 && systemctl hibernate"
       ],
       "reboot": [
         "systemctl",
@@ -248,7 +249,7 @@
   },
   "sidebar": {
     "dragThreshold": 80,
-    "enabled": true
+    "enabled": false
   },
   "utilities": {
     "enabled": true,

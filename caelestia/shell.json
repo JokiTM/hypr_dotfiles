@@ -228,9 +228,9 @@
     "vimKeybinds": false,
     "commands": {
       "logout": [
-        "loginctl",
-        "terminate-user",
-        ""
+        "sh",
+        "-c",
+        "caelestia shell lock lock"
       ],
       "shutdown": [
         "systemctl",

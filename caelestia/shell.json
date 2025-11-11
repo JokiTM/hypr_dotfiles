@@ -55,7 +55,7 @@
           "idleAction": "lock"
         },
         {
-          "timeout": 1300,
+          "timeout": 1030,
           "idleAction": "dpms off",
           "returnAction": "dpms on"
         },
@@ -125,6 +125,16 @@
       }
     ],
     "persistent": true,
+    "popouts": {
+      "activeWindow": false,
+      "statusIcons": true,
+      "tray": true
+    },
+    "scrollActions": {
+      "brightness": true,
+      "workspaces": true,
+      "volume": true
+    },
     "showOnHover": true,
     "status": {
       "showAudio": true,
@@ -167,13 +177,13 @@
     "enabled": true,
     "dragThreshold": 50,
     "mediaUpdateInterval": 500,
-    "showOnHover": true
+    "showOnHover": false
   },
   "launcher": {
     "actionPrefix": ">",
     "dragThreshold": 50,
     "vimKeybinds": false,
-    "enableDangerousActions": true,
+    "enableDangerousActions": false,
     "maxShown": 8,
     "maxWallpapers": 9,
     "specialPrefix": "@",
@@ -214,7 +224,8 @@
     "gpuType": "",
     "playerAliases": [
       {
-        "com.github.th_ch.youtube_music": "YT Music"
+        "from": "com.github.th_ch.youtube_music",
+        "to": "YT Music"
       }
     ],
     "weatherLocation": "",
@@ -249,7 +260,7 @@
   },
   "sidebar": {
     "dragThreshold": 80,
-    "enabled": false
+    "enabled": true
   },
   "utilities": {
     "enabled": true,
@@ -263,7 +274,7 @@
       "dndChanged": true,
       "gameModeChanged": true,
       "kbLayoutChanged": true,
-      "numLockChanged": true,
+      "numLockChanged": false,
       "vpnChanged": true,
       "nowPlaying": false
     },
@@ -271,9 +282,18 @@
       "enabled": true,
       "provider": [
         {
-          "name": "wireguard",
-          "interface": "your-connection-name",
-          "displayName": "Wireguard (Your VPN)"
+          "name": "protonvpn",
+          "interface": "proton0",
+          "displayName": "ProtonVPN",
+          "connectCmd": [
+            "protonvpn",
+            "connect",
+            "--fast"
+          ],
+          "disconnectCmd": [
+            "protonvpn",
+            "disconnect"
+          ]
         }
       ]
     }

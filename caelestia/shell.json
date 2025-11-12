@@ -282,17 +282,18 @@
       "enabled": true,
       "provider": [
         {
-          "name": "protonvpn",
-          "interface": "proton0",
-          "displayName": "ProtonVPN",
+          "name": "wg_tool",
+          "interface": "CachyDesktop",
+          "displayName": "ProtonVPN (WireGuard)",
           "connectCmd": [
-            "protonvpn",
-            "connect",
-            "--fast"
+            "wg_tool",
+            "up",
+            "protonvpn"
           ],
           "disconnectCmd": [
-            "protonvpn",
-            "disconnect"
+            "wg_tool",
+            "down",
+            "protonvpn"
           ]
         }
       ]

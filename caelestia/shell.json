@@ -250,7 +250,7 @@
       "hibernate": [
         "sh",
         "-c",
-        "caelestia shell lock lock && sleep 3 && systemctl hibernate"
+        "caelestia shell lock lock && sleep 0.8 && systemctl hibernate"
       ],
       "reboot": [
         "systemctl",

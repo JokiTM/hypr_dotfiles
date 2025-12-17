@@ -126,7 +126,7 @@
     ],
     "persistent": true,
     "popouts": {
-      "activeWindow": false,
+      "activeWindow": true,
       "statusIcons": true,
       "tray": true
     },
@@ -167,7 +167,11 @@
           "icon": "sports_esports"
         }
       ]
-    }
+    },
+        "excludedScreens": [""],
+        "activeWindow": {
+            "inverted": true 
+        }
   },
   "border": {
     "rounding": 25,
@@ -220,7 +224,7 @@
   },
   "services": {
     "audioIncrement": 0.1,
-    "defaultPlayer": "Spotify",
+    "defaultPlayer": "Strawberry",
     "gpuType": "",
     "playerAliases": [
       {

@@ -1,0 +1,12 @@
+set synctex true
+set synctex-editor-command "nvim --headless -c \"VimtexInverseSearch %l '%f'\""
+set selection-clipboard clipboard
+set window-title-basename true
+
+
+# Colors
+set recolor true
+set recolor-keephue true
+set recolor-darkcolor "#f5c2e7"
+set recolor-lightcolor "#131317"
+set recolor-reverse-video true

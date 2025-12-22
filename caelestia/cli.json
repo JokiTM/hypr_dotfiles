@@ -37,13 +37,13 @@
                 "move": true
             },
             "spotify": {
-                "enable": true,
+                "enable": false,
                 "match": [{ "class": "Spotify" }, { "initialTitle": "Spotify" }, { "initialTitle": "Spotify Free" }],
                 "command": ["spicetify", "watch", "-s"],
                 "move": false
             },
             "feishin": {
-                "enable": true,
+                "enable": false,
                 "match": [{ "class": "feishin" }],
                 "move": true
             }

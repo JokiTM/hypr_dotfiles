@@ -7,6 +7,6 @@ set window-title-basename true
 # Colors
 set recolor true
 set recolor-keephue true
-set recolor-darkcolor "#f5c2e7"
-set recolor-lightcolor "#131317"
+set recolor-darkcolor "#cdd6f4"
+set recolor-lightcolor "#11111b"
 set recolor-reverse-video true

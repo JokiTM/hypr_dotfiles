@@ -1,0 +1,7 @@
+[manager]
+linemode = "size"
+
+[[manager.filetype]]
+name = "watched-video"
+test = "mpv-watched \"$path\""
+fg = "gray"

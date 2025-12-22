@@ -1,0 +1,33 @@
+[mgr]
+linemode = "size"
+
+[preview]
+cache_dir = "~/.cache/yazi"
+max_width = 1920
+max_height = 1080
+quality = 100
+preload = true
+
+[[preview.preloaders]]
+mime = "image/*"
+exec = "chafa --size=${YAZI_PREVIEW_COLUMNS}x${YAZI_PREVIEW_LINES} $FILE"
+
+[opener]
+  video = [
+    # For nightly yazi
+    { run = "ya emit escape select && ya emit visual_mode && ya emit plugin simple-tag 'add-tag --key=w' && ya emit escape select && mpv %s", orphan = true, desc = "mpv", for = "linux" },
+    # For shipped yazi replace %s with "$@"
+  ]
+[open]
+  rules = [
+    # Video
+    { mime = "video/*", use = [ "video" ] },
+  ]
+[file_list]
+show_tags = true
+
+[plugin]
+  append_fetchers = [
+    { id = "simple-tag", url = "*", run = "simple-tag" },
+    { id = "simple-tag", url = "*/", run = "simple-tag" },
+  ]

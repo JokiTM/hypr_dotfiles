@@ -1,0 +1,20 @@
+directory: ~/Music
+library: ~/Music/.data/musiclibrary.db
+import:
+    move: yes
+clutter: 
+  - "*.jpg"
+  - "*.png"
+  - "*.pdf"
+  - "*.lrc"
+  - "*.nfo"
+plugins: musicbrainz replaygain fetchart lastgenre info missing ftintitle edit
+replaygain:
+    threads: 32
+    backend: ffmpeg
+fetchart:
+    cover_format: JPEG
+    deinterlace: yes
+ftintitle:
+    auto: yes
+    drop: yes

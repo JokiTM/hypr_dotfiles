@@ -16,7 +16,6 @@ exec = "chafa --size=${YAZI_PREVIEW_COLUMNS}x${YAZI_PREVIEW_LINES} $FILE"
   video = [
     # For nightly yazi
     { run = "ya emit escape select && ya emit visual_mode && ya emit plugin simple-tag 'add-tag --key=w' && ya emit escape select && mpv %s", orphan = true, desc = "mpv", for = "linux" },
-    # For shipped yazi replace %s with "$@"
   ]
 [open]
   rules = [

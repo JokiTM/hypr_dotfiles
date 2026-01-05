@@ -8,6 +8,8 @@ clutter:
   - "*.pdf"
   - "*.lrc"
   - "*.nfo"
+  - "*.cue"
+  - "*.log"
 plugins: musicbrainz replaygain fetchart lastgenre info missing ftintitle edit
 replaygain:
     threads: 32

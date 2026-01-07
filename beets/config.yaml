@@ -10,7 +10,8 @@ clutter:
   - "*.nfo"
   - "*.cue"
   - "*.log"
-plugins: musicbrainz replaygain fetchart lastgenre info missing ftintitle edit
+  - "*.m3u"
+plugins: musicbrainz replaygain fetchart lastgenre info missing ftintitle edit 
 replaygain:
     threads: 32
     backend: ffmpeg

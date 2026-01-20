@@ -22,10 +22,8 @@
            return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
          end
 
-         -- Standard-Mappings laden (empfohlen)
          api.config.mappings.default_on_attach(bufnr)
 
-         -- Vim-like Navigation
          vim.keymap.set("n", "l", api.node.open.edit, opts("Open"))
          vim.keymap.set("n", "h", api.node.navigate.parent_close, opts("Close Directory"))
        end,
@@ -34,6 +32,6 @@
      vim.keymap.set("n", "<leader>e", function()
        local file_dir = vim.fn.expand("%:p:h")
        api.tree.toggle({ path = file_dir, update_cwd = true })
-     end, { desc = "Toggle file explorer" })
+     end, { desc = "Toggle file explorer(Root Dir)" })
    end,
  }

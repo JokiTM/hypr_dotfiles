@@ -91,6 +91,8 @@
             "paused": ""
         },
         "on-click": "~/.config/waybar/scripts/media.sh",
+        "on-scroll-up": "playerctl -p strawberry volume .04+",
+        "on-scroll-down": "playerctl -p strawberry volume .04-",
         // "ignored-players": ["firefox"]
     },
     "mpris#short": {
@@ -105,6 +107,8 @@
             "paused": ""
         },
         "on-click": "~/.config/waybar/scripts/media.sh",
+        "on-scroll-up": "playerctl -p strawberry volume .04+",
+        "on-scroll-down": "playerctl -p strawberry volume .04-",
         // "ignored-players": ["firefox"]
     },
     "image": {
@@ -113,6 +117,8 @@
         "size": 32,
         "interval": 5,
         "on-click":  "hyprctl dispatch togglespecialworkspace music -q",
-        "on-click-right": "~/.config/waybar/scripts/viewcover.sh"
+        "on-click-right": "~/.config/waybar/scripts/viewcover.sh",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
     }
 }

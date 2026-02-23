@@ -6,6 +6,7 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>', {silent = true})
 
 vim.keymap.set('n', '<c-Left>', ':vertical-resize +5<CR>', {silent = true})
 vim.keymap.set('n', '<c-Right>', ':vertical-resize -5<CR>', {silent = true})
+vim.keymap.set('n', '<c-c>', ':close<CR>')
 
 -- vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.g.mapleader = ' '

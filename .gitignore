@@ -1,5 +1,6 @@
 yazi/tags/
 yazi/package.toml
 nvim.old/
+nvim/spell/
 nvim/lazy-lock.json
 beets/state.pickle

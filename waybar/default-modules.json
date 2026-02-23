@@ -58,7 +58,7 @@
         "interval": 5,
         "format": "  {usage}%",
         "max-length": 10,
-        "on-click": "hyprctl dispatch togglespecialworkspace sysmon",
+        "on-click": "hyprctl dispatch togglespecialworkspace sysmon -q",
     },
     "memory": {
         "interval": 5,
@@ -81,7 +81,7 @@
     },
     "mpris#long": {
         //"format": "{player_icon} {dynamic}",
-        "format": "{status_icon} {dynamic}",
+        "format": "<i>{title} - {artist}</i>  {status_icon}",
         "player-icons": {
             "default": "▶",
             "mpv": "🎵"
@@ -107,4 +107,12 @@
         "on-click": "~/.config/waybar/scripts/media.sh",
         // "ignored-players": ["firefox"]
     },
+    "image": {
+        "exec": "~/.config/waybar/scripts/cover.sh",
+        //"path": "/tmp/strawberry-cover-eidtfg.jpg",
+        "size": 32,
+        "interval": 5,
+        "on-click":  "hyprctl dispatch togglespecialworkspace music -q",
+        "on-click-right": "~/.config/waybar/scripts/viewcover.sh"
+    }
 }

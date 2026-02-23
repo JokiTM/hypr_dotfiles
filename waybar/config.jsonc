@@ -4,7 +4,7 @@
                        // "width": 1280, // Waybar width
                        // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "cpu", "memory", "custom/gpu", "custom/mouse"],
-    "modules-center": ["mpris#long"],
+    "modules-center": ["image", "mpris#long"],
     "modules-right": ["pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
     //"margin-bottom" : "10",
     //"margin-top": 100,
@@ -16,7 +16,7 @@
                        // "width": 1280, // Waybar width
                        // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "cpu", "memory","custom/gpu",  "custom/mouse"],
-    "modules-center": ["mpris#short"],
+    "modules-center": ["image", "mpris#short"],
     "modules-right": ["pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
     //"margin-bottom" : "10",
     //"margin-top": 100,

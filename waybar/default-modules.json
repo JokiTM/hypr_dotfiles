@@ -1,0 +1,110 @@
+{
+    "hyprland/workspaces": {
+        "show-special": true,
+        "special-visible-only": true,
+        "format": "{icon}",
+        "format-icons": {
+            "piracy": "󰠳",
+            "obs": "",
+            "thunderbird": "",
+            "music": "󰎇",
+            "special": "󰫢",
+        },
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "timezone": "Europe/Berlin",
+        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        //"format-alt": " {:%d/%m/%Y}",
+        //"format": " {:%H:%M}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon}  {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/lock": {
+        "tooltip": false,
+        "on-click": "hyprlock",
+        "format": "",
+    },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout &",
+        "format": "⏻"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "custom/wireguard": {
+        "format": "󰒃",
+        "exec": "~/.config/waybar/wireguard.sh",
+        "on-click": "rofi -modi 'WireGuard:~/.config/waybar/wireguard-rofi.sh' -show WireGuard",
+        "interval": 60,
+        "return-type": "json"
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage}%",
+        "max-length": 10,
+        "on-click": "hyprctl dispatch togglespecialworkspace sysmon",
+    },
+    "memory": {
+        "interval": 5,
+        "format": "   {}%",
+        "max-length": 10,
+        "on-click": "hyprctl dispatch togglespecialworkspace sysmon -q",
+    },
+    "custom/gpu": {
+        "interval": 5,
+        "format": "󰾲   {}%",
+        "exec": "cat /sys/class/hwmon/hwmon2/device/gpu_busy_percent",
+        "max-length": 10,
+        "on-click": "hyprctl dispatch togglespecialworkspace sysmon -q",
+    },
+    "custom/mouse": {
+        "format": "󰍽  {}%",
+        "exec": "~/.config/waybar/scripts/mouse.sh",
+        "on-click": "notify-send rong",
+        "interval": 60,
+    },
+    "mpris#long": {
+        //"format": "{player_icon} {dynamic}",
+        "format": "{status_icon} {dynamic}",
+        "player-icons": {
+            "default": "▶",
+            "mpv": "🎵"
+        },
+        "status-icons": {
+            "playing": "",
+            "paused": ""
+        },
+        "on-click": "~/.config/waybar/scripts/media.sh",
+        // "ignored-players": ["firefox"]
+    },
+    "mpris#short": {
+        //"format": "{player_icon} {dynamic}",
+        "format": "{status_icon}",
+        "player-icons": {
+            "default": "▶",
+            "mpv": "🎵"
+        },
+        "status-icons": {
+            "playing": "",
+            "paused": ""
+        },
+        "on-click": "~/.config/waybar/scripts/media.sh",
+        // "ignored-players": ["firefox"]
+    },
+}

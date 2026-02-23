@@ -1,0 +1,26 @@
+[
+{ "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+                       // "width": 1280, // Waybar width
+                       // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces", "cpu", "memory", "custom/gpu", "custom/mouse"],
+    "modules-center": ["mpris#long"],
+    "modules-right": ["pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
+    //"margin-bottom" : "10",
+    //"margin-top": 100,
+    "output": "DP-3",
+    "include": "~/.config/waybar/default-modules.json",
+},
+{ "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+                       // "width": 1280, // Waybar width
+                       // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces", "cpu", "memory","custom/gpu",  "custom/mouse"],
+    "modules-center": ["mpris#short"],
+    "modules-right": ["pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
+    //"margin-bottom" : "10",
+    //"margin-top": 100,
+    "output": "DP-1",
+    "include": "~/.config/waybar/default-modules.json",
+}
+]

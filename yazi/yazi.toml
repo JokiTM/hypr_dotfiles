@@ -16,12 +16,20 @@ exec = "chafa --size=${YAZI_PREVIEW_COLUMNS}x${YAZI_PREVIEW_LINES} $FILE"
   video = [
     # For nightly yazi
     { run = "ya emit escape select && ya emit visual_mode && ya emit plugin simple-tag 'add-tag --key=w' && ya emit escape select && mpv %s", orphan = true, desc = "mpv", for = "linux" },
+    { run = "ya emit escape select && ya emit visual_mode && ya emit plugin simple-tag 'add-tag --key=w' && ya emit escape select && vlc %s", orphan = true, desc = "vlc", for = "linux" },
   ]
+  audio = [
+    { run = "mpv %s", desc = "mpv", for = "linux" },
+    #{ run = "vlc %s", desc = "vlc", for = "linux" },
+  ]
+
 [open]
   prepend_rules = [
     # Video
     { mime = "video/*", use = [ "video" ] },
+    { mime = "audio/*", use = [ "audio" ] },
   ]
+
 [file_list]
 show_tags = true
 

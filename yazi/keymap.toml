@@ -2,7 +2,6 @@
 on   = "l"
 run  = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
-
 [[mgr.prepend_keymap]]
 on   = "+"
 run  = "plugin zoom 1"
@@ -23,3 +22,39 @@ on = "t"
 run = "plugin simple-tag -- toggle-tag"
 desc = "Toggle a tag (press any key)" 
 
+#yank files to system clip
+[[mgr.prepend_keymap]]
+on  = "y"
+run = [ 'shell -- for path in %s; do echo "file://$path"; done | wl-copy -t text/uri-list', "yank" ]
+
+
+#navigate parent dirs with J&K
+#[[mgr.prepend_keymap]]
+#on  = "K"
+#run = "plugin parent-arrow -1"
+#
+#[[mgr.prepend_keymap]]
+#on  = "J"
+#run = "plugin parent-arrow 1"
+
+
+#bookmarks
+[[mgr.append_keymap]]
+on = [ "m" ]
+run = "plugin bookmarks save"
+desc = "Save current position as a bookmark"
+
+[[mgr.prepend_keymap]]
+on = [ "'" ]
+run = "plugin bookmarks jump"
+desc = "Jump to a bookmark"
+
+[[mgr.prepend_keymap]]
+on = [ "b", "d" ]
+run = "plugin bookmarks delete"
+desc = "Delete a bookmark"
+
+[[mgr.prepend_keymap]]
+on = [ "b", "D" ]
+run = "plugin bookmarks delete_all"
+desc = "Delete all bookmarks"

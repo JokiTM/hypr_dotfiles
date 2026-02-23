@@ -21,6 +21,8 @@
       }
     },
     "anim": {
+      "mediaGifSpeedAdjustment": 300,
+      "sessionGifSpeed": 0.7,
       "durations": {
         "scale": 1
       }
@@ -32,6 +34,7 @@
     }
   },
   "general": {
+    "logo": "",
     "apps": {
       "terminal": [
         "foot"
@@ -96,7 +99,20 @@
   "background": {
     "enabled": true,
     "desktopClock": {
-      "enabled": false
+      "enabled": false,
+      "scale": 1,
+      "position": "bottom-right",
+      "invertColors": false,
+      "background": {
+        "enabled": false,
+        "opacity": 0.7,
+        "blur": true
+      },
+      "shadow": {
+        "enabled": true,
+        "opacity": 0.7,
+        "blur": 0.4
+      }
     },
     "visualiser": {
       "enabled": false,
@@ -150,6 +166,7 @@
       "showMicrophone": false,
       "showKbLayout": false,
       "showNetwork": false,
+      "showWifi": true,
       "showBluetooth": false,
       "showBattery": false,
       "showLockStatus": true
@@ -201,7 +218,8 @@
         "enabled": true,
         "id": "power"
       }
-    ]
+    ],
+    "excludedScreens": []
   },
   "border": {
     "thickness": 1,
@@ -497,17 +515,8 @@
       "enabled": true,
       "provider": [
         {
-          "connectCmd": [
-            "wg_tool",
-            "up",
-            "protonvpn"
-          ],
-          "disconnectCmd": [
-            "wg_tool",
-            "down",
-            "protonvpn"
-          ],
           "displayName": "ProtonVPN (WireGuard)",
+          "enabled": false,
           "interface": "CachyDesktop",
           "name": "wg_tool"
         }
@@ -528,6 +537,7 @@
     "gpuType": "",
     "visualiserBars": 45,
     "audioIncrement": 0.1,
+    "brightnessIncrement": 0.1,
     "maxVolume": 1,
     "smartScheme": true,
     "defaultPlayer": "Strawberry",

@@ -8,8 +8,9 @@
             "obs": "",
             "thunderbird": "",
             "music": "󰎇",
-            "special": "󰫢",
-        },
+            "scrap": "󰫢",
+            "sysmon": ""
+        }
     },
     "tray": {
         "icon-size": 21,

@@ -1,0 +1,56 @@
+[2026-02-25 11:54:31.053] [info] Using configuration file /home/mathis/.config/waybar/config.jsonc
+[2026-02-25 11:54:31.053] [info] Including resource file: ~/.config/waybar/default-modules.json
+[2026-02-25 11:54:31.053] [info] Including resource file: ~/.config/waybar/hw-modules.json
+[2026-02-25 11:54:31.053] [info] Including resource file: ~/.config/waybar/default-modules.json
+[2026-02-25 11:54:31.053] [info] Including resource file: ~/.config/waybar/hw-modules.json
+[2026-02-25 11:54:31.054] [info] Discovered appearance 'dark'
+[2026-02-25 11:54:31.068] [info] Using CSS file /home/mathis/.config/waybar/style.css
+[2026-02-25 11:54:31.070] [info] Hyprland IPC starting
+[2026-02-25 11:54:31.071] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-02-25 11:54:31.083] [info] Loading persistent workspaces from Hyprland workspace rules
+
+** (waybar:1032221): WARNING **: 11:54:31.361: Status Notifier Item with bus name ':1.31' and object path '/org/ayatana/NotificationItem/Battery_level' is already registered
+
+** (waybar:1032221): WARNING **: 11:54:31.361: Status Notifier Item with bus name ':1.31' and object path '/org/ayatana/NotificationItem/Battery_level' is already registered
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.393: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.393: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:1032221): Gtk-CRITICAL **: 11:54:31.394: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+[2026-02-25 11:54:31.448] [info] Bar configured (width: 1920, height: 56) for output: DP-1
+[2026-02-25 11:54:31.449] [info] Bar configured (width: 2560, height: 56) for output: DP-3

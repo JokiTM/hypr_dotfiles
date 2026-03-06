@@ -4,7 +4,7 @@
 status=$(playerctl status)
 
 if [[ $status == "Paused" ]]; then
-    playerctl -p strawberry play
+    playerctl -p mpd play
 else
-    playerctl pause
+    playerctl -a pause
 fi

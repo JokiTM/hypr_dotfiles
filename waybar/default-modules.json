@@ -1,16 +1,18 @@
 {
+    "include": "~/.config/waybar/hw-modules.json",
     "hyprland/workspaces": {
         "show-special": true,
-        "special-visible-only": true,
-        "format": "{icon}",
-        "format-icons": {
+        "special-visible-only": true, "format": "{icon}", "format-icons": {
             "piracy": "󰠳",
             "obs": "",
             "thunderbird": "",
             "music": "󰎇",
             "scrap": "󰫢",
-            "sysmon": ""
-        }
+            "sysmon": "",
+            "whatsapp": "󰖣"
+        },
+        "on-scroll-down": "hyprctl dispatch workspace +1",
+        "on-scroll-up": "hyprctl dispatch workspace -1"
     },
     "tray": {
         "icon-size": 21,
@@ -21,24 +23,40 @@
         //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         //"format-alt": " {:%d/%m/%Y}",
         //"format": " {:%H:%M}"
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "format": "󰥔 {:%H:%M}",
+        "calendar": {
+        //    "mode": "month",
+        //    "mode-mon-col": 3,
+        //    "weeks-pos": "left",
+        //    "on-scroll": 1,
+            "format": {
+        //        "months": "<span color='#ffead3'><b>{}</b></span>",
+        //        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        //        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        //        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
+        "scroll-step": 2,
         "format": "{icon}  {volume}%",
         "format-muted": "",
         "format-icons": {
             "default": ["", "", " "]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pkill pavucontrol || pavucontrol"
     },
     "custom/lock": {
         "tooltip": false,
         "on-click": "hyprlock",
-        "format": "",
+        "format": ""
     },
     "custom/power": {
         "tooltip": false,
-        "on-click": "wlogout &",
+        "on-click": "~/.config/waybar/scripts/hibernate.sh",
+        "on-click-right": "wlogout &",
         "format": "⏻"
     },
     "idle_inhibitor": {
@@ -55,31 +73,6 @@
         "interval": 60,
         "return-type": "json"
     },
-    "cpu": {
-        "interval": 5,
-        "format": "  {usage}%",
-        "max-length": 10,
-        "on-click": "hyprctl dispatch togglespecialworkspace sysmon -q",
-    },
-    "memory": {
-        "interval": 5,
-        "format": "   {}%",
-        "max-length": 10,
-        "on-click": "hyprctl dispatch togglespecialworkspace sysmon -q",
-    },
-    "custom/gpu": {
-        "interval": 5,
-        "format": "󰾲   {}%",
-        "exec": "cat /sys/class/hwmon/hwmon2/device/gpu_busy_percent",
-        "max-length": 10,
-        "on-click": "hyprctl dispatch togglespecialworkspace sysmon -q",
-    },
-    "custom/mouse": {
-        "format": "󰍽  {}%",
-        "exec": "~/.config/waybar/scripts/mouse.sh",
-        "on-click": "notify-send rong",
-        "interval": 60,
-    },
     "mpris#long": {
         //"format": "{player_icon} {dynamic}",
         "format": "<i>{title} - {artist}</i>  {status_icon}",
@@ -92,6 +85,7 @@
             "paused": ""
         },
         "on-click": "~/.config/waybar/scripts/media.sh",
+        "on-click-right": "playerctl play-pause",
         "on-scroll-up": "playerctl -p strawberry volume .04+",
         "on-scroll-down": "playerctl -p strawberry volume .04-",
         // "ignored-players": ["firefox"]
@@ -108,6 +102,7 @@
             "paused": ""
         },
         "on-click": "~/.config/waybar/scripts/media.sh",
+        "on-click-right": "playerctl play-pause",
         "on-scroll-up": "playerctl -p strawberry volume .04+",
         "on-scroll-down": "playerctl -p strawberry volume .04-",
         // "ignored-players": ["firefox"]
@@ -115,7 +110,7 @@
     "image": {
         "exec": "~/.config/waybar/scripts/cover.sh",
         //"path": "/tmp/strawberry-cover-eidtfg.jpg",
-        "size": 32,
+        "size": 24,
         "interval": 5,
         "on-click":  "hyprctl dispatch togglespecialworkspace music -q",
         "on-click-right": "~/.config/waybar/scripts/viewcover.sh",

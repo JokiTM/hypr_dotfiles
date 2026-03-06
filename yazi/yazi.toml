@@ -22,12 +22,18 @@ exec = "chafa --size=${YAZI_PREVIEW_COLUMNS}x${YAZI_PREVIEW_LINES} $FILE"
     { run = "mpv %s", desc = "mpv", for = "linux" },
     #{ run = "vlc %s", desc = "vlc", for = "linux" },
   ]
+  image = [
+    { run = "mpv %s", desc = "mpv", for = "linux" },
+    { run = "~/.config/hypr/scripts/wal.sh %s", desc = "Set Wall", for = "linux" },
+    #{ run = "vlc %s", desc = "vlc", for = "linux" },
+  ]
 
 [open]
   prepend_rules = [
     # Video
     { mime = "video/*", use = [ "video" ] },
     { mime = "audio/*", use = [ "audio" ] },
+    { mime = "image/*", use = [ "image" ] },
   ]
 
 [file_list]

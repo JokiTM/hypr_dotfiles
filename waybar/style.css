@@ -1,4 +1,5 @@
-@import "../../.cache/wal/";
+@import "/home/mathis/.cache/wal/colors-waybar.css";
+@import "mocha.css";
 
 * {
   font-family: JetBrainsMono Nerd Font;
@@ -9,31 +10,35 @@
 
 #waybar {
   background: transparent;
-  color: @text;
+  color: @color0;
   margin: 5px 5px;
 }
 
 #workspaces {
   border-radius: 1rem;
   margin: 5px;
-  background-color: @surface0;
+  background-color: @color0;
   margin-left: 1rem;
 }
 
 #workspaces button {
-  color: @lavender;
+  color: @color5;
   border-radius: 1rem;
   padding: 0.4rem;
 }
 
 #workspaces button.active {
-  color: @sky;
+  color: @color3;
   border-radius: 1rem;
 }
 
 #workspaces button:hover {
-  color: @sapphire;
+  color: @color7;
   border-radius: 1rem;
+}
+
+#submap {
+  color: @color5;
 }
 
 #custom-music,
@@ -54,35 +59,35 @@
 #custom-vram,
 #custom-mouse,
 #custom-power {
-  background-color: @surface0;
+  background-color: @color0;
   padding: 0.5rem 1rem;
   margin: 5px 0;
 }
 
 #clock {
-  color: @blue;
+  color: @color5;
   border-radius: 0px 1rem 1rem 0px;
   margin-right: 1rem;
 }
 
 #pulseaudio {
-  color: @maroon;
+  color: @color5;
   border-radius: 1rem 0px 0px 1rem;
   margin-left: 1rem;
 }
 
 #mpris {
-    color: @mauve;
+    color: @color5;
     border-radius: 0px 1rem 1rem 0px;
 }
 
 #image {
-    color: @mauve;
+    color: @color5;
     border-radius: 1rem 0px 0px 1rem;
 }
 
 #cpu {
-    color: @mauve;
+    color: @color5;
     border-radius: 1rem 0px 0px 1rem;
 }
 #temperature.cpu {
@@ -91,12 +96,12 @@
 }
 
 #memory {
-    color: @mauve;
+    color: @color5;
     border-radius: 0px 0rem 0rem 0px;
 }
 
 #custom-gpu {
-    color: @mauve;
+    color: @color5;
     border-radius: 0px 0rem 0rem 0px;
 }
 
@@ -107,27 +112,41 @@
 }
 
 #custom-mouse {
-    color: @mauve;
+    color: @color5;
     border-radius: 0px 1rem 1rem 0px;
 }
 
 #custom-lock {
     border-radius: 1rem 0px 0px 1rem;
-    color: @lavender;
+    color: @color5;
 }
 
 #custom-wireguard{
     border-radius: 1rem 0px 0px 1rem;
-    color: @lavender;
+    color: @color5;
 }
 
 #custom-power {
     margin-right: 1rem;
     border-radius: 0px 1rem 1rem 0px;
-    color: @red;
+    color: @color5;
 }
 
 #tray {
     margin-right: 1rem;
     border-radius: 1rem;
+    color: @color5;
+}
+#tray menu{
+    color: @color5;
+    background: @background;
+}
+#tray > .active {
+    color: @color5;
+}
+#tray > .passive {
+    color: @color5;
+}
+#tray > .needs-attention{
+    color: @color5;
 }

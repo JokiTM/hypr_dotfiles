@@ -86,8 +86,8 @@
         },
         "on-click": "~/.config/waybar/scripts/media.sh",
         "on-click-right": "playerctl play-pause",
-        "on-scroll-up": "playerctl -p strawberry volume .04+",
-        "on-scroll-down": "playerctl -p strawberry volume .04-",
+        "on-scroll-up": "playerctl -p mpd volume .04+",
+        "on-scroll-down": "playerctl -p mpd volume .04-",
         // "ignored-players": ["firefox"]
     },
     "mpris#short": {

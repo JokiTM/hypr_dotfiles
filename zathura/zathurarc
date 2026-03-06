@@ -1,12 +1,39 @@
+
 set synctex true
 set synctex-editor-command "nvim --headless -c \"VimtexInverseSearch %l '%f'\""
 set selection-clipboard clipboard
 set window-title-basename true
 
+set recolor "true"
 
-# Colors
-set recolor true
-set recolor-keephue true
-set recolor-darkcolor "#cdd6f4"
-set recolor-lightcolor "#11111b"
-set recolor-reverse-video true
+set completion-bg "#1f140d"
+set completion-fg "#c7c4c2"
+set completion-group-bg "#1f140d"
+set completion-group-fg "#8C613C"
+set completion-highlight-bg "#c7c4c2"
+set completion-highlight-fg "#1f140d"
+
+set recolor-lightcolor "#1f140d"
+set recolor-darkcolor "#c7c4c2"
+set default-bg "#1f140d"
+
+set inputbar-bg "#1f140d"
+set inputbar-fg "#c7c4c2"
+set notification-bg "#1f140d"
+set notification-fg "#c7c4c2"
+set notification-error-bg "#795C42"
+set notification-error-fg "#c7c4c2"
+set notification-warning-bg "#795C42"
+set notification-warning-fg "#c7c4c2"
+set statusbar-bg "#1f140d"
+set statusbar-fg "#c7c4c2"
+set index-bg "#1f140d"
+set index-fg "#c7c4c2"
+set index-active-bg "#c7c4c2"
+set index-active-fg "#1f140d"
+set render-loading-bg "#1f140d"
+set render-loading-fg "#c7c4c2"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard

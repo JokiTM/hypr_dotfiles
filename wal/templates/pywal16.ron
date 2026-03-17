@@ -127,7 +127,7 @@
             (
                 left: [
                     (kind: Property(Status(Elapsed)),style: (fg: "{color15}")),
-                    (kind: Text("/"),style: (fg: "{color0}")),
+                    (kind: Text("/"),style: (fg: "{color15}")),
                     (kind: Property(Status(Duration)),style: (fg: "{color15}")),
                 ],
                 center: [

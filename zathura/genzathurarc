@@ -50,6 +50,5 @@ PIDS=$(pgrep zathura)
 
 for PID in $PIDS
 do
-    notify-send "Sending to $PID"
     dbus-send --type="method_call" --dest=org.pwmt.zathura.PID-$PID /org/pwmt/zathura org.pwmt.zathura.SourceConfig
 done

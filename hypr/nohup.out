@@ -1,0 +1,11 @@
+[[1;32mI[0m] [1;31mimage[0m: Using image [1;37mold_desktop.jpg[0m.
+[[1;32mI[0m] [1;31mcolors[0m: Generating a colorscheme.
+[[1;32mI[0m] [1;31mcolors[0m: Using wal backend.
+[[1;32mI[0m] [1;31mcolors[0m: Generation complete.
+[[1;32mI[0m] [1;31msequences[0m: Set terminal colors.
+[[1;32mI[0m] [1;31mexport[0m: Reading system templates from: /usr/lib/python3.14/site-packages/pywal/templates
+[[1;32mI[0m] [1;31mexport[0m: Reading user templates from: /home/mathis/.config/wal/templates
+[[1;32mI[0m] [1;31mexport[0m: Exported all files.
+[[1;32mI[0m] [1;31mexport[0m: Exported all user files to /home/mathis/.cache/wal
+[[1;32mI[0m] [1;31mreload[0m: Reloaded environment.
+[[1;32mI[0m] [1;31mdonation[0m: if you enjoy pywal16 consider donating at: https://github.com/eylles/pywal16

@@ -2,7 +2,10 @@
     "include": "~/.config/waybar/hw-modules.json",
     "hyprland/workspaces": {
         "show-special": true,
-        "special-visible-only": true, "format": "{icon}", "format-icons": {
+        "all-outputs": false,
+        "special-visible-only": true,
+        "format": "{icon}", 
+        "format-icons": {
             "piracy": "󰠳",
             "obs": "",
             "thunderbird": "",
@@ -86,7 +89,7 @@
         },
         "on-click": "~/.config/waybar/scripts/media.sh",
         "on-click-right": "playerctl play-pause",
-        "on-scroll-up": "playerctl -p mpd volume .04+",
+        "on-scroll-up": "playerctl -p mpd volume .05+",
         "on-scroll-down": "playerctl -p mpd volume .04-",
         // "ignored-players": ["firefox"]
     },

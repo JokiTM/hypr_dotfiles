@@ -1,0 +1,38 @@
+alias ll='ls -lA'
+
+# Shortcuts for config files
+alias cf='cd ~/.config/fish && nvim ~/.config/fish/config.fish'
+alias cz='cd ~/.config/zsh && nvim ~/.config/zsh/.zshrc'
+alias cza='cd ~/.config/zsh && nvim ~/.config/zsh/alias'
+alias cr='source ~/.config/zsh/.zshrc'
+alias cn='cd ~/.config/nvim/ && nvim'
+alias cnp='cd ~/.config/nvim/lua/plugins/ && nvim ~/.config/nvim/lua/config/plugins/'
+alias ch='cd ~/.config/hypr && nvim ~/.config/hypr/hyprland.conf'
+alias cm='cd ~/.config/hypr && nvim ~/.config/hypr/conf/monitors.conf'
+alias cs='nvim ~/.config/caelestia/shell.json'
+alias cc='nvim ~/.config/caelestia/cli.json'
+alias ca='nvim ~/.config/fish/abbr.fish'
+alias cy='cd ~/.config/yazi && nvim ~/.config/yazi/yazi.toml'
+alias cw='cd ~/.config/waybar && nvim ~/.config/waybar/config.jsonc'
+alias cdd='cd ~/.local/share/dots/'
+
+alias got='y ~/Videos/Serien/Game\ of\ Thrones/'
+
+alias bimp='beet imp ~/Piracy/Nicotine/'
+alias ms='mount sansa'
+
+#git
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add .'
+alias gc='git commit -m '
+alias gp='git push'
+
+# Yazi shell wrapper
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}

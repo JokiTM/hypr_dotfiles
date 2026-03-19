@@ -11,7 +11,7 @@ clutter:
   - "*.cue"
   - "*.log"
   - "*.m3u"
-plugins: musicbrainz replaygain fetchart lastgenre info missing ftintitle edit lyrics
+plugins: musicbrainz replaygain fetchart lastgenre info missing ftintitle edit lyrics convert
 replaygain:
     threads: 32
     backend: ffmpeg

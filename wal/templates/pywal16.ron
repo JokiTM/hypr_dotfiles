@@ -109,7 +109,7 @@
                     (kind: Property(Status(StateV2(playing_label: "", paused_label: "", stopped_label: ""))), style: (fg: "{color2}", modifiers: "Bold")),
                     (kind: Text(" ("), style: (fg: "{color2}", modifiers: "Bold")),
                     (kind: Property(Status(Bitrate)), style: (fg: "{color2}", modifiers: "Bold")),
-                    (kind: Text(" kbps [."), style: (fg: "{color2}", modifiers: "Bold")),
+                    (kind: Text(" kbps ["), style: (fg: "{color2}", modifiers: "Bold")),
                     (kind: Property(Song(FileExtension)), style: (fg: "{color2}", modifiers: "Bold")),
                     (kind: Text("]) "), style: (fg: "{color2}", modifiers: "Bold")),
                 ],

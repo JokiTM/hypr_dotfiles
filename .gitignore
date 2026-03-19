@@ -5,6 +5,7 @@ nvim/spell/
 nvim/lazy-lock.json
 beets/state.pickle
 caelestia/
-./mako/config
-./zathura/zathurarc
-./rmpc/pywal16.ron
+mako/config
+mako/config.old
+zathura/zathurarc
+rmpc/pywal16.ron

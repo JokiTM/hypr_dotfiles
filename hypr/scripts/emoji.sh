@@ -204,7 +204,7 @@ exit
 👐 open hands fingers butterfly hands open
 🤲 palms up together hands gesture cupped prayer
 🤝 handshake agreement shake
-🙏 folded hands please hope wish namaste highfive pray
+🙏 folded hands please hope wish namaste highfive pray thanks
 ✍️ writing hand lower left ballpoint pen stationery write compose
 💅 nail polish beauty manicure finger fashion nail
 🤳 selfie camera phone

@@ -9,7 +9,7 @@ default-timeout=10000
 anchor=top-right
 margin=20
 
-background-color=#0c0505
-text-color=#575757
-border-color=#2B2B2B
+background-color=#1b0b1b
+text-color=#9E2934
+border-color=#393046
 

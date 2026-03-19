@@ -42,7 +42,7 @@
             "op":         ShowDecoders,
             "od":         ShowDownloads,
             "oP":         Partition(),
-            "z":          ToggleRepeat,
+            "y":          ToggleRepeat,
             "x":          ToggleRandom,
             "c":          ToggleConsume,
             "v":          ToggleSingle,

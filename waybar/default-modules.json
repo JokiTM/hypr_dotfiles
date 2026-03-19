@@ -69,12 +69,12 @@
             "deactivated": ""
         }
     },
-    "custom/wireguard": {
-        "format": "󰒃",
-        "exec": "~/.config/waybar/wireguard.sh",
-        "on-click": "rofi -modi 'WireGuard:~/.config/waybar/wireguard-rofi.sh' -show WireGuard",
-        "interval": 60,
-        "return-type": "json"
+    "custom/vpn": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/vpnstat.sh",
+        "on-click": "~/.local/bin/vpntoggle.sh",
+        "signal": 1,
+        "interval": "once"
     },
     "mpris#long": {
         //"format": "{player_icon} {dynamic}",

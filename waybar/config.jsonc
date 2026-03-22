@@ -19,7 +19,7 @@
         "reload_style_on_change": true,
         "modules-left": ["hyprland/workspaces", "cpu", "memory","custom/gpu",  "custom/mouse"],
         "modules-center": ["image", "mpris#short"],
-        "modules-right": ["pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
+        "modules-right": ["custom/vpn", "pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
         "output": "DP-1",
         "include": "~/.config/waybar/default-modules.json"
     }

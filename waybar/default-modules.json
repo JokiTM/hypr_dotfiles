@@ -70,7 +70,7 @@
         }
     },
     "custom/vpn": {
-        "format": "{}",
+        "format": " {}",
         "exec": "~/.config/waybar/scripts/vpnstat.sh",
         "on-click": "~/.local/bin/vpntoggle.sh",
         "signal": 1,
@@ -90,12 +90,13 @@
         "on-click": "~/.config/waybar/scripts/media.sh",
         "on-click-right": "playerctl play-pause",
         "on-scroll-up": "playerctl -p mpd volume .05+",
-        "on-scroll-down": "playerctl -p mpd volume .04-",
+        "on-scroll-down": "playerctl -p mpd volume .05-",
         // "ignored-players": ["firefox"]
     },
     "mpris#short": {
         //"format": "{player_icon} {dynamic}",
-        "format": "{status_icon}",
+        "format": "<i>{title}</i>  {status_icon}",
+        "max-length": 60,
         "player-icons": {
             "default": "▶",
             "mpv": "🎵"
@@ -106,8 +107,8 @@
         },
         "on-click": "~/.config/waybar/scripts/media.sh",
         "on-click-right": "playerctl play-pause",
-        "on-scroll-up": "playerctl -p strawberry volume .04+",
-        "on-scroll-down": "playerctl -p strawberry volume .04-",
+        "on-scroll-up": "playerctl -p mpd volume .05+",
+        "on-scroll-down": "playerctl -p mpd volume .05-",
         // "ignored-players": ["firefox"]
     },
     "image": {

@@ -9,3 +9,143 @@
 [[1;32mI[0m] [1;31mexport[0m: Exported all user files to /home/mathis/.cache/wal
 [[1;32mI[0m] [1;31mreload[0m: Reloaded environment.
 [[1;32mI[0m] [1;31mdonation[0m: if you enjoy pywal16 consider donating at: https://github.com/eylles/pywal16
+[2026-03-20 14:31:56.427] [info] Using configuration file /home/mathis/.config/waybar/config.jsonc
+[2026-03-20 14:31:56.427] [info] Including resource file: ~/.config/waybar/default-modules.json
+[2026-03-20 14:31:56.428] [info] Including resource file: ~/.config/waybar/hw-modules.json
+[2026-03-20 14:31:56.428] [info] Including resource file: ~/.config/waybar/default-modules.json
+[2026-03-20 14:31:56.428] [info] Including resource file: ~/.config/waybar/hw-modules.json
+[2026-03-20 14:31:56.429] [info] Discovered appearance 'dark'
+[2026-03-20 14:31:56.443] [info] Using CSS file /home/mathis/.config/waybar/style.css
+[2026-03-20 14:31:56.445] [info] Hyprland IPC starting
+[2026-03-20 14:31:56.445] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:31:56.455] [info] Loading persistent workspaces from Hyprland workspace rules
+
+** (waybar:3706): WARNING **: 14:31:56.758: Status Notifier Item with bus name ':1.19' and object path '/org/ayatana/NotificationItem/Battery_level' is already registered
+[2026-03-20 14:31:56.842] [info] Bar configured (width: 1920, height: 48) for output: DP-1
+[2026-03-20 14:31:56.843] [info] Bar configured (width: 2560, height: 48) for output: DP-3
+
+** (waybar:3706): WARNING **: 14:32:00.226: Status Notifier Item with bus name ':1.19' and object path '/org/ayatana/NotificationItem/Battery_level' is already registered
+[2026-03-20 14:32:09.590] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2026-03-20 14:32:09.600] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:32:09.600] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2026-03-20 14:32:09.600] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:32:09.601] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2026-03-20 14:32:09.601] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:32:09.602] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2026-03-20 14:32:09.602] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:32:45.946] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2026-03-20 14:32:45.963] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:32:45.963] [info] Reloading...
+[2026-03-20 14:32:45.963] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2026-03-20 14:32:45.963] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:32:45.966] [info] Using configuration file /home/mathis/.config/waybar/config.jsonc
+[2026-03-20 14:32:45.966] [info] Including resource file: ~/.config/waybar/default-modules.json
+[2026-03-20 14:32:45.966] [info] Including resource file: ~/.config/waybar/hw-modules.json
+[2026-03-20 14:32:45.966] [info] Including resource file: ~/.config/waybar/default-modules.json
+[2026-03-20 14:32:45.966] [info] Including resource file: ~/.config/waybar/hw-modules.json
+[2026-03-20 14:32:45.981] [info] Using CSS file /home/mathis/.config/waybar/style.css
+[2026-03-20 14:32:45.986] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:32:45.994] [info] Loading persistent workspaces from Hyprland workspace rules
+
+** (waybar:3706): WARNING **: 14:32:46.283: Status Notifier Item with bus name ':1.19' and object path '/org/ayatana/NotificationItem/Battery_level' is already registered
+[2026-03-20 14:32:46.364] [info] Bar configured (width: 1920, height: 48) for output: DP-1
+[2026-03-20 14:32:46.365] [info] Bar configured (width: 2560, height: 48) for output: DP-3
+[2026-03-20 14:33:17.938] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2026-03-20 14:33:17.946] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:33:17.946] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2026-03-20 14:33:17.946] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:46:17.869] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2026-03-20 14:46:17.884] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:46:17.884] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2026-03-20 14:46:17.884] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:46:17.888] [info] Reloading...
+[2026-03-20 14:46:17.891] [info] Using configuration file /home/mathis/.config/waybar/config.jsonc
+[2026-03-20 14:46:17.891] [info] Including resource file: ~/.config/waybar/default-modules.json
+[2026-03-20 14:46:17.891] [info] Including resource file: ~/.config/waybar/hw-modules.json
+[2026-03-20 14:46:17.892] [info] Including resource file: ~/.config/waybar/default-modules.json
+[2026-03-20 14:46:17.892] [info] Including resource file: ~/.config/waybar/hw-modules.json
+[2026-03-20 14:46:17.907] [info] Using CSS file /home/mathis/.config/waybar/style.css
+[2026-03-20 14:46:17.911] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:46:17.957] [info] Loading persistent workspaces from Hyprland workspace rules
+
+** (waybar:3706): WARNING **: 14:46:18.251: Status Notifier Item with bus name ':1.19' and object path '/org/ayatana/NotificationItem/Battery_level' is already registered
+[2026-03-20 14:46:18.343] [info] Bar configured (width: 1920, height: 48) for output: DP-1
+[2026-03-20 14:46:18.344] [info] Bar configured (width: 2560, height: 48) for output: DP-3
+ok
+[2026-03-20 14:47:46.146] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2026-03-20 14:47:46.148] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:47:46.148] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2026-03-20 14:47:46.148] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:47:46.168] [info] Reloading...
+[2026-03-20 14:47:46.171] [info] Using configuration file /home/mathis/.config/waybar/config.jsonc
+[2026-03-20 14:47:46.172] [info] Including resource file: ~/.config/waybar/default-modules.json
+[2026-03-20 14:47:46.172] [info] Including resource file: ~/.config/waybar/hw-modules.json
+[2026-03-20 14:47:46.172] [info] Including resource file: ~/.config/waybar/default-modules.json
+[2026-03-20 14:47:46.172] [info] Including resource file: ~/.config/waybar/hw-modules.json
+[2026-03-20 14:47:46.187] [info] Using CSS file /home/mathis/.config/waybar/style.css
+[2026-03-20 14:47:46.191] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-03-20 14:47:46.212] [info] Loading persistent workspaces from Hyprland workspace rules
+
+** (waybar:3706): WARNING **: 14:47:46.514: Status Notifier Item with bus name ':1.19' and object path '/org/ayatana/NotificationItem/Battery_level' is already registered
+[2026-03-20 14:47:46.599] [info] Bar configured (width: 1920, height: 48) for output: DP-1
+[2026-03-20 14:47:46.600] [info] Bar configured (width: 2560, height: 48) for output: DP-3
+Device "CachyDesktop" does not exist.
+[#] ip link add dev CachyDesktop type wireguard
+[#] wg addconf CachyDesktop /dev/fd/63
+[#] ip -4 address add 10.2.0.2/32 dev CachyDesktop
+[#] ip link set mtu 1420 up dev CachyDesktop
+[#] resolvconf -a CachyDesktop -m 0 -x
+[#] wg set CachyDesktop fwmark 51820
+[#] ip -6 rule add not fwmark 51820 table 51820
+[#] ip -6 rule add table main suppress_prefixlength 0
+[#] ip -6 route add ::/0 dev CachyDesktop table 51820
+[#] nft -f /dev/fd/63
+[#] ip -4 rule add not fwmark 51820 table 51820
+[#] ip -4 rule add table main suppress_prefixlength 0
+[#] ip -4 route add 0.0.0.0/0 dev CachyDesktop table 51820
+[#] sysctl -q net.ipv4.conf.all.src_valid_mark=1
+[#] nft -f /dev/fd/63
+
+** (waybar:3706): WARNING **: 14:47:51.710: Status Notifier Item with bus name ':1.19' and object path '/org/ayatana/NotificationItem/Battery_level' is already registered
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.026: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.026: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.026: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.026: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.027: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.027: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.027: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.027: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.027: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.027: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.027: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.027: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.027: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.027: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.027: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.027: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.027: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.027: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.028: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:3706): Gtk-CRITICAL **: 14:47:52.028: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+** (waybar:3706): WARNING **: 14:48:24.974: Status Notifier Item with bus name ':1.19' and object path '/org/ayatana/NotificationItem/Battery_level' is already registered

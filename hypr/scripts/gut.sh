@@ -8,7 +8,7 @@ while :
 do
     if [[ ! -e $tmplist || ! -e $tmppic ]]; then
         echo "Tmplist or tmppic missing. Initializing." >> $log
-        find ~/Pictures/Wallpapers -type f -name "*.jpg" -o -name "*png" -o -name "*.webp" -o -name "*.jpeg" -o -name "*.jpe" | shuf > $tmplist
+        find ~/Pictures/Wallpapers/LukePaper -type f -name "*.jpg" -o -name "*png" -o -name "*.webp" -o -name "*.jpeg" -o -name "*.jpe" | shuf > $tmplist
         #ls ~/Pictures/Wallpapers/tuff/* ~/Pictures/Wallpapers/newabm/* | awk NF | shuf > $tmplist
         head -n 1 $tmplist > $tmppic
     fi

@@ -124,7 +124,7 @@ exit
 👹 ogre monster red mask halloween scary creepy devil demon japanese ogre
 👺 goblin red evil mask monster scary creepy japanese goblin
 👻 ghost halloween spooky scary
-👽 alien UFO paul weird outer space
+👽 alien UFO paul weird outer space bogus
 👾 alien monster game arcade play
 🤖 robot computer machine bot
 😺 grinning cat animal cats happy smile
@@ -160,7 +160,7 @@ exit
 🤎 brown heart coffee
 🖤 black heart evil
 🤍 white heart pure
-💯 hundred points score perfect numbers century exam quiz test pass hundred
+💯 hundred points score perfect numbers century exam quiz test pass 100
 💢 anger symbol angry mad
 💥 collision bomb explode explosion collision blown
 💫 dizzy star sparkle shoot magic
@@ -1887,7 +1887,6 @@ exit
 → right arrow
 ↓ down arrow
 ←↑→↓ all directions up down left right arrows
-AH↗️HA↘️HA↗️HA↘️HA↗️HA↘️HA↗️HA↘️ pekora arrows hahaha rabbit
 • dot circle separator
 「」 japanese quote square bracket
 ¯\_(ツ)_/¯ shrug idk i dont know
@@ -1895,3 +1894,5 @@ AH↗️HA↘️HA↗️HA↘️HA↗️HA↘️HA↗️HA↘️ pekora arrows h
 𝕏  twitter x logo
 👉👈 etou ughhhhhhh shy
 👉👌 put it in imagination perv
+§ paragraph
+ツ sugoi smile smiley japanese

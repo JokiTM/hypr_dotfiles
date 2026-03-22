@@ -7,3 +7,4 @@ wal -i "$1" > /dev/null
 ~/.config/mako/wal.sh &
 ~/.config/zathura/genzathurarc &
 touch ~/.config/rmpc/pywal16.ron &
+razer-cli -a &

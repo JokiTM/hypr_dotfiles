@@ -15,12 +15,6 @@ return{
     },
     config = function()
       require("noice").setup({
-        routes = {
-          {
-            view = "notify",
-            filter = { event = "msg_showmode" },
-          },
-        },
         lsp = {
           views = {
             cmdline_popup = {

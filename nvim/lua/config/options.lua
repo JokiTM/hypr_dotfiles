@@ -1,62 +1,60 @@
--- Navigate vim panes better
-vim.keymap.set('n', '<c-k>', ':wincmd k<CR>', {silent = true})
-vim.keymap.set('n', '<c-j>', ':wincmd j<CR>', {silent = true})
-vim.keymap.set('n', '<c-h>', ':wincmd h<CR>', {silent = true})
-vim.keymap.set('n', '<c-l>', ':wincmd l<CR>', {silent = true})
-
-vim.keymap.set('n', '<c-Left>', ':vertical-resize +5<CR>', {silent = true})
-vim.keymap.set('n', '<c-Right>', ':vertical-resize -5<CR>', {silent = true})
-vim.keymap.set('n', '<c-c>', ':close<CR>')
-
--- vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 -- zeug 
-vim.opt.backspace = '2'
-vim.opt.showcmd = true
-vim.opt.laststatus = 2
-vim.opt.autowrite = true
-vim.opt.cursorline = true
-vim.opt.autoread = true
+-- vim.opt.laststatus = 2
+-- vim.opt.cursorline = true
 vim.opt.undofile = true
 
 -- use spaces for tabs and whatnot
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.shiftround = true
 vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.signcolumn = "yes"
 
-vim.cmd [[ set noswapfile ]]
-vim.cmd [[ set termguicolors ]]
+--vim.opt.winborder = "rounded"
 
 --Line numbers
 vim.wo.number = true
 vim.wo.relativenumber = true
 
---Spell check
-vim.opt_local.spell = true
-vim.opt_local.spelllang = { "de" , "en"}
 
 --Window title
 vim.opt.title = true
 vim.opt.titlelen = 0
 vim.opt.titlestring = "nvim %t"
 
--- search for visually selected text with //
-vim.keymap.set("v", "//", function()
-  vim.cmd("normal! y")
-  local text = vim.fn.getreg('"')
-  text = vim.fn.escape(text, [[/\]])
-  vim.fn.setreg("/", "\\V" .. text)
-  vim.cmd("normal! n")
-end, {
-  silent = true,
-  desc = "Search for visual selection",
-})
+--Use system clipboard
+vim.opt.clipboard = "unnamedplus"
+
+-- Highlight yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {
   pattern = "*",
   callback = function()
-    vim.highlight.on_yank({ higroup = "IncSearch", timeout = 300 })
+      vim.highlight.on_yank({ higroup = "IncSearch", timeout = 300 })
   end,
 })
+
+--Spell check
+local spell_types = { "text", "plaintex", "typst", "gitcommit", "markdown", "tex" }
+vim.opt.spell = false
+vim.api.nvim_create_augroup("Spellcheck", { clear = true })
+vim.api.nvim_create_autocmd({ "FileType" }, {
+    group = "Spellcheck", 
+    pattern = spell_types,
+    callback = function()
+        vim.opt_local.spell = true
+        vim.opt_local.spelllang = { "de" , "en"}
+    end,
+    desc = "Enable spellcheck for defined filetypes",
+}
+)
+vim.api.nvim_create_autocmd("BufWinLeave", {
+        pattern = "?*",
+        callback = function()
+               pcall(vim.cmd.mkview)
+            end
+    })
+vim.api.nvim_create_autocmd("BufWinEnter", {
+        pattern = "?*",
+        callback = function()
+               pcall(vim.cmd.loadview)
+            end
+    })

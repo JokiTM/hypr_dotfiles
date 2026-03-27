@@ -32,20 +32,23 @@ tooltip label {
 }
 
 #workspaces button {
-  color: @color5;
+  color: @color1;
   border-radius: 1rem;
   padding: 0.4rem;
 }
 
 #workspaces button.active {
-  color: @color3;
+  color: @color7;
   border-radius: 1rem;
 }
 
 #workspaces button:hover {
-  color: @color7;
-  border-radius: 1rem;
-  background-color: @color0;
+  color: @color16;
+  background: none;
+  box-shadow: none;
+  border-color: transparent;
+  text-shadow: none;
+  transition: none; /* Disable predefined animations */
 }
 
 
@@ -89,7 +92,12 @@ tooltip label {
     color: @color5;
 }
 
-#mpris {
+#mpris.long,
+#mpris.short {
+    color: @color5;
+    border-radius: 0px 0rem 0rem 0px;
+}
+#mpris.icon {
     color: @color5;
     border-radius: 0px 1rem 1rem 0px;
 }

@@ -51,7 +51,7 @@ exit
 😜 winking face with tongue face prank childish playful mischievous smile wink tongue
 🤪 zany face face goofy crazy
 😝 squinting face with tongue face prank playful mischievous smile tongue
-🤑 money mouth face face rich dollar money
+🤑 money mouth face face rich dollar money cash
 🤗 hugging face face smile hug
 🤭 face with hand over mouth face whoops shock surprise
 🤫 shushing face face quiet shhh

@@ -54,12 +54,12 @@
     },
     "custom/lock": {
         "tooltip": false,
-        "on-click": "hyprlock",
+        "on-click": "loginctl lock-session",
         "format": ""
     },
     "custom/power": {
         "tooltip": false,
-        "on-click": "~/.config/waybar/scripts/hibernate.sh",
+        "on-click": "loginctl hibernate",
         "on-click-right": "wlogout &",
         "format": "⏻"
     },

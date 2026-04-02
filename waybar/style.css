@@ -71,6 +71,7 @@ tooltip label {
 #custom-vram,
 #custom-mouse,
 #submap,
+#custom-soypower,
 #custom-power {
   background-color: @color0;
   padding: 0.5rem 1rem;
@@ -150,6 +151,7 @@ tooltip label {
   margin-left: 1rem;
 }
 
+#custom-soypower,
 #custom-power {
     margin-right: 1rem;
     border-radius: 0px 1rem 1rem 0px;

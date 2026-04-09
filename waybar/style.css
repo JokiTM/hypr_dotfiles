@@ -108,6 +108,10 @@ tooltip label {
     color: @color5;
     border-radius: 1rem 0px 0px 1rem;
 }
+#image.empty {
+    background: transparent;
+    border-radius: 1rem 0px 0px 1rem;
+}
 
 #cpu {
     color: @color5;

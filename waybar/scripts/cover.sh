@@ -13,6 +13,13 @@
 #else
 #    echo "/home/mathis/.config/waybar/scripts/firefox.svg"
 #fi
+stat=$(playerctl status -a 2>&1)
+
+if [[ "$stat" = "No players found" ]]; then
+    echo " "
+    exit 1
+fi
+
 
 file=$(playerctl metadata | grep artUrl | awk '{ print $3 }' |  sed -r 's/file:\/\///')
 
@@ -23,7 +30,7 @@ if [[ $file ]]; then
         echo $tmp.png
     else
         printf $file
-        printf "\ngeilescover"
+        printf "\n$file"
     fi
     exit 0
 fi
@@ -41,7 +48,6 @@ case $player in
         printf "/home/mathis/.config/waybar/scripts/logos/firefox.svg"
 esac
 
-printf "\ngeilescover"
 
 
 

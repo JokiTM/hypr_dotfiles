@@ -49,7 +49,7 @@
         "format-icons": {
             "default": ["", "", " "]
         },
-        "on-click": "pkill pavucontrol || pavucontrol",
+        "on-click": "foot zsh -c '~/.config/hypr/scripts/dispatch.sh wiremix'",
         "on-click-right": "~/.config/waybar/scripts/toggleAudioDevice.sh"
     },
     "custom/lock": {
@@ -140,7 +140,7 @@
         "exec": "~/.config/waybar/scripts/cover.sh",
         //"path": "/tmp/strawberry-cover-eidtfg.jpg",
         "size": 24,
-        "interval": 5,
+        "interval": 1,
         "on-click":  "hyprctl dispatch togglespecialworkspace music -q",
         "on-click-right": "~/.config/waybar/scripts/viewcover.sh",
         "on-scroll-up": "playerctl next",
@@ -151,7 +151,8 @@
     "format": "{capacity}% {icon}",
     "format-icons": {
         "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+        "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+        "full": ["󰂅"]
     }
 }
 }

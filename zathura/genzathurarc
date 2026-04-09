@@ -12,6 +12,7 @@ set selection-clipboard clipboard
 set window-title-basename true
 
 set recolor "true"
+set recolor-reverse-video "false"
 
 set completion-bg "$background"
 set completion-fg "$foreground"

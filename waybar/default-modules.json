@@ -49,7 +49,7 @@
         "format-icons": {
             "default": ["", "", " "]
         },
-        "on-click": "foot zsh -c '~/.config/hypr/scripts/dispatch.sh wiremix'",
+        "on-click": "pkill wiremix || foot -T wiremix zsh -c '~/.config/hypr/scripts/dispatch.sh wiremix'",
         "on-click-right": "~/.config/waybar/scripts/toggleAudioDevice.sh"
     },
     "custom/lock": {

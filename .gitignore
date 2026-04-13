@@ -4,9 +4,13 @@ nvim.old/
 nvim/spell/
 nvim/lazy-lock.json
 beets/state.pickle
+beets/musiclibrary.db
 caelestia/
 mako/config
 mako/config.old
 zathura/zathurarc
 rmpc/pywal16.ron
 btop/themes/pywal16.theme
+mpd/*
+!mpd/mpd.conf
+

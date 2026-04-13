@@ -1896,3 +1896,5 @@ exit
 👉👌 put it in imagination perv
 § paragraph
 ツ sugoi smile smiley japanese
+≥ greater equals sign
+≤ less equals sign

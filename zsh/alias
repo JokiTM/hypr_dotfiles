@@ -19,12 +19,12 @@ alias cy='cd ~/.config/yazi && nvim ~/.config/yazi/yazi.toml'
 alias cw='cd ~/.config/waybar && nvim ~/.config/waybar/config.jsonc'
 alias cdd='cd ~/.local/share/dots/'
 
-alias mss='sudo mount -t nfs4 mathisserver:/Series ~/Videos/Serien/mathisserver'
+alias mss='sudo mount -t nfs4 mathisserver.local:/  ~/Videos/Serien/mathisserver'
 
 alias got='y ~/Videos/Serien/Game\ of\ Thrones/'
 
 alias bimp='beet imp ~/Piracy/Nicotine/'
-alias ms='mount sansa'
+alias ms='mount ~/sansa'
 
 #git
 alias gs='git status'

@@ -1,3 +1,4 @@
+source $ZDOTDIR/XDG_ENV.sh
 # Use XDG dirs for completion and history files
 [ -d "$XDG_STATE_HOME"/zsh ] || mkdir -p "$XDG_STATE_HOME"/zsh
 HISTFILE="$XDG_STATE_HOME"/zsh/history
@@ -18,6 +19,7 @@ zstyle :compinstall filename '/home/mathis/.config/zsh/.zshrc'
 autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 zstyle ':completion:*' menu select
+zstyle ':completion:*' special-dirs ..
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh End of lines added by compinstall
 

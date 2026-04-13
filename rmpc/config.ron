@@ -6,9 +6,7 @@
     password: None,
     theme: "pywal16",
     cache_dir: "~/.cache/rmpc/",
-    on_song_change: ["~/.config/rmpc/fetchlyrics.sh"],
-    volume_step: 5,
-    max_fps: 30,
+    volume_step: 5, max_fps: 30,
     scrolloff: 0,
     wrap_navigation: false,
     enable_mouse: true,
@@ -20,7 +18,7 @@
     rewind_to_start_sec: None,
     keep_state_on_song_change: true,
     reflect_changes_to_playlist: false,
-    select_current_song_on_change: false,
+    select_current_song_on_change: true,
     ignore_leading_the: false,
     browser_song_sort: [Disc, Track, Artist, Title],
     directories_sort: SortFormat(group_by_type: true, reverse: false),
@@ -71,7 +69,7 @@
             "<C-u>":      Update,
             "<C-U>":      Rescan,
             "R":          AddRandom,
-            "<C-y>":      ExternalCommand(command: ["~/.config/rmpc/searchyt.sh"], description: "Search yt"),
+            "<C-y>":      ExternalCommand(command: ["~/.config/rmpc/searchyt.sh"], description: "Search YouTube interactively"),
         },
         navigation: {
             "<C-c>":      Close,
@@ -143,7 +141,7 @@
         ],
     ),
     artists: (
-        album_display_mode: SplitByDate,
+        album_display_mode: NameOnly,
         album_sort_by: Date,
         album_date_tags: [Date],
     ),
@@ -159,8 +157,42 @@
                             direction: Vertical,
                             panes: [
                                 (
-                                    size: "100%",
-                                    pane: Pane(AlbumArt)
+                                    size: "65%",
+                                    pane: Split(
+                                        direction: Horizontal,
+                                        panes: [
+                                        (
+                                         size: "14%",
+                                         pane: Pane(Empty()),
+                                         borders: "LEFT|TOP",
+                                         border_symbols: Rounded,
+                                        ),
+                                        (
+                                         size: "72%",
+                                         pane: Pane(AlbumArt),
+                                         borders: "TOP",
+                                         border_symbols: Rounded,
+                                        ),
+                                        (
+                                         size: "14%",
+                                         pane: Pane(Empty()),
+                                         borders: "RIGHT|TOP",
+                                         border_symbols: Rounded,
+                                        )
+                                        ]
+                                    )
+                                ),
+                                (
+                                    size: "5%",
+                                    pane: Pane(Empty()),
+                                    borders: "LEFT|RIGHT",
+                                    border_symbols: Rounded,
+                                ),
+                                (
+                                    size: "30%",
+                                    pane: Pane(Lyrics),
+                                    borders: "BOTTOM|LEFT|RIGHT",
+                                    border_symbols: Rounded,
                                 ),
                             ],
                         ),
@@ -177,11 +209,13 @@
                                         panes: [
                                             (
                                                 size: "1",
-                                                pane: Pane(Empty())
+                                                pane: Pane(Empty()),
                                             ),
                                             (
                                                 size: "100%",
-                                                pane: Pane(QueueHeader())
+                                                pane: Pane(QueueHeader()),
+                                                borders: "TOP|LEFT|RIGHT",
+                                                border_symbols: Rounded,
                                             ),
                                         ]
                                     )
@@ -197,7 +231,9 @@
                                             ),
                                             (
                                                 size: "100%",
-                                                pane: Pane(Queue)
+                                                pane: Pane(Queue),
+                                                borders: "BOTTOM|LEFT|RIGHT",
+                                                border_symbols: Rounded,
                                             ),
                                         ]
                                     )
@@ -213,15 +249,28 @@
             pane: Split(
                 size: "100%",
                 direction: Vertical,
-                panes: [(pane: Pane(AlbumArtists), size: "100%")],
-            )
+                panes: [
+                (
+                 pane: Pane(AlbumArtists),
+                 size: "100%",
+                 borders: "ALL",
+                 border_symbols: Rounded,
+                )
+                ],
+                )
         ),
         (
             name: "Albums",
             pane: Split(
                 size: "100%",
                 direction: Vertical,
-                panes: [(pane: Pane(Albums), size: "100%")],
+                panes: [
+                (
+                 pane: Pane(Albums),
+                 size: "100%",
+                 borders: "ALL",
+                 border_symbols: Rounded,
+                )],
             )
         ),
         (
@@ -229,7 +278,13 @@
             pane: Split(
                 size: "100%",
                 direction: Vertical,
-                panes: [(pane: Pane(Playlists), size: "100%")],
+                panes: [
+                (
+                 pane: Pane(Playlists),
+                 size: "100%",
+                 borders: "ALL",
+                 border_symbols: Rounded,
+                )],
             )
         ),
         (
@@ -241,12 +296,24 @@
             )
         ),
         (
-            name: "Lyrics",
-            pane: Split(
-                size: "100%",
-                direction: Vertical,
-                panes: [(pane: Pane(Lyrics), size: "100%")],
-            )
+         name: "Lyrics",
+         pane: Split(
+             size: "100%",
+             direction: Horizontal,
+             panes: [
+             (
+              size: "30%",
+              pane: Split( 
+                  direction: Vertical,
+                  panes: [ 
+                  (pane: Pane(AlbumArt), size: "40%"),
+                  (pane: Pane(Empty()), size: "60%"),
+                  ],
+                  ),
+             ),
+             ( pane: Pane(Lyrics), size: "70%"),
+             ],
+             )
         ),
     ],
 )

@@ -16,12 +16,22 @@
     current_item_style: (fg: "{color7}", bg: "{color1}", modifiers: "Bold"),
     borders_style: (fg: "{color1}", modifiers: "Bold"),
     highlight_border_style: (fg: "{color1}"),
-    symbols: (song: "󰝚 ", dir: " ", marker: "* ", ellipsis: "..."),
+    symbols: (
+        song: "󰝚 ",
+        dir: " ",
+        playlist: "󰲸 ",
+        marker: " ",
+        ellipsis: "...",
+        song_style: None,
+        dir_style: None,
+        playlist_style: None,
+    ),
     progress_bar: (
-        symbols: ["█", "█", "█"],
+        symbols: ["", "█", "", "█", "" ],
         track_style: (fg: "{color0}"),
         elapsed_style: (fg: "{color1}"),
-        thumb_style: (fg: "{color1}"),
+        thumb_style: (fg: "{color1}", bg: "{color0}"),
+        use_track_when_empty: false,
     ),
     scrollbar: (
         symbols: ["┋", "█", "󰄿", "󰄼"],
@@ -58,6 +68,8 @@
             (
                 size: "3",
                 pane: Pane(Tabs),
+                borders: "ALL",
+                border_symbols: Rounded,
             ),
             (
                 size: "100%",
@@ -66,15 +78,10 @@
                     panes: [
                         (
                             size: "100%",
-                            borders: "NONE",
                             pane: Pane(TabContent),
                         ),
                     ]
                 ),
-            ),
-            (
-                size: "1",
-                pane: Pane(Empty()),
             ),
             (
                 size: "4",
@@ -89,16 +96,19 @@
                                     (
                                         size: "4",
                                         pane: Pane(Header),
+                                        borders: "TOP|LEFT|RIGHT",
+                                        border_symbols: Rounded,
                                     ),
                                 ]
-                            )
-                        ),
+                            )),
                     ]
                 ),
             ),
             (
                 size: "3",
                 pane: Pane(ProgressBar),
+                borders: "BOTTOM|LEFT|RIGHT",
+                border_symbols: Rounded,
             ),
         ],
     ),
@@ -106,12 +116,8 @@
         rows: [
             (
                 left: [
+                    (kind: Text(" "), style: (fg: "{color2}", modifiers: "Bold")),
                     (kind: Property(Status(StateV2(playing_label: "", paused_label: "", stopped_label: ""))), style: (fg: "{color2}", modifiers: "Bold")),
-                    (kind: Text(" ("), style: (fg: "{color2}", modifiers: "Bold")),
-                    (kind: Property(Status(Bitrate)), style: (fg: "{color2}", modifiers: "Bold")),
-                    (kind: Text(" kbps ["), style: (fg: "{color2}", modifiers: "Bold")),
-                    (kind: Property(Song(FileExtension)), style: (fg: "{color2}", modifiers: "Bold")),
-                    (kind: Text("]) "), style: (fg: "{color2}", modifiers: "Bold")),
                 ],
                 center: [
                     (kind: Property(Song(Title)), style: (fg: "{color15}",modifiers: "Bold"),
@@ -121,14 +127,23 @@
                 right: [
                     (kind: Text("Vol: "), style: (fg: "{color2}", modifiers: "Bold")),
                     (kind: Property(Status(Volume)), style: (fg: "{color2}", modifiers: "Bold")),
-                    (kind: Text("% "), style: (fg: "{color2}", modifiers: "Bold"))
+                    (kind: Text("% "), style: (fg: "{color2}", modifiers: "Bold")),
+                    (kind: Text(" "), style: (fg: "{color2}", modifiers: "Bold")),
                 ]
             ),
             (
                 left: [
-                    (kind: Property(Status(Elapsed)),style: (fg: "{color15}")),
-                    (kind: Text("/"),style: (fg: "{color15}")),
-                    (kind: Property(Status(Duration)),style: (fg: "{color15}")),
+                    (kind: Text(" "), style: (fg: "{color2}", modifiers: "Bold")),
+                    (kind: Property(Status(Elapsed)),style: (fg: "#c1c3c5")),
+                    (kind: Text("/"),style: (fg: "#c1c3c5")),
+                    (kind: Property(Status(Duration)),style: (fg: "#c1c3c5")),
+                    (kind: Text(" ("), style: (fg: "#61605D", modifiers: "Bold")),
+                    (kind: Property(Status(Bitrate)), style: (fg: "#61605D", modifiers: "Bold")),
+                    (kind: Text(" kbps | "), style: (fg: "#61605D", modifiers: "Bold")),
+                    (kind: Property(Status(Bits())), style: (fg: "#61605D", modifiers: "Bold")),
+                    (kind: Text(" bit | ["), style: (fg: "#61605D", modifiers: "Bold")),
+                    (kind: Property(Song(FileExtension)), style: (fg: "#61605D", modifiers: "Bold")),
+                    (kind: Text("]) "), style: (fg: "#61605D", modifiers: "Bold")),
                 ],
                 center: [
                     (kind: Property(Song(Artist)), style: (fg: "{color2}", modifiers: "Bold"),
@@ -152,7 +167,10 @@
                     (kind: Property(Status(SingleV2(on_label: "󰎤", off_label: "󰎦", oneshot_label: "󰇊", off_oneshot_label: "󱅊",
                                                     on_style: (fg: "{color15}", modifiers: "Bold"),
                                                     off_style: (fg: "{color1}", modifiers: "Bold"))))),
-                    (kind: Text(" "),style: (fg: "{color15}", modifiers: "Bold")),
+                    (kind: Text(" ("),style: (fg: "{color15}", modifiers: "Bold")),
+                    (kind: Sticker("playCount"),style: (fg: "{color15}", modifiers: "Bold")),
+                    (kind: Text(")"),style: (fg: "{color15}", modifiers: "Bold")),
+                    (kind: Text(" "), style: (fg: "{color2}", modifiers: "Bold")),
                         ]
                     ),
                     ],

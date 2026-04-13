@@ -1,4 +1,5 @@
 source $ZDOTDIR/XDG_ENV.sh
+
 # Use XDG dirs for completion and history files
 [ -d "$XDG_STATE_HOME"/zsh ] || mkdir -p "$XDG_STATE_HOME"/zsh
 HISTFILE="$XDG_STATE_HOME"/zsh/history
@@ -80,11 +81,15 @@ bindkey '^R' fzf-history-widget
 source $ZDOTDIR/plugins/git-prompt.zsh/git-prompt.zsh
 source $ZDOTDIR/plugins/git-prompt.zsh/examples/default.zsh
 
+if [ -z "$WAYLAND_DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+  exec dbus-run-session start-hyprland
+else
+    fastfetch
+fi
+
 # Import colorscheme from 'wal' asynchronously
 (cat ~/.cache/wal/sequences &)
 # Alternative (blocks terminal for 0-3ms)
 cat ~/.cache/wal/sequences
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
-
-fastfetch

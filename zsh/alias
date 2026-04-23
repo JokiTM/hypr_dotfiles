@@ -1,22 +1,23 @@
 alias ll='ls -lA'
+alias l='ls -l'
 
 # Shortcuts for config files
-alias cf='cd ~/.config/fish && nvim ~/.config/fish/config.fish'
-alias cz='cd ~/.config/zsh && nvim ~/.config/zsh/.zshrc'
-alias cza='cd ~/.config/zsh && nvim ~/.config/zsh/alias'
+alias cf='nvim ~/.config/fish/config.fish'
+alias cz='nvim ~/.config/zsh/.zshrc'
+alias cza='nvim ~/.config/zsh/alias'
 alias cr='source ~/.config/zsh/.zshrc'
-alias cn='cd ~/.config/nvim/ && nvim'
-alias cnp='cd ~/.config/nvim/lua/plugins/ && nvim ~/.config/nvim/lua/config/plugins/'
+alias cn='nvim'
+alias cnp='nvim ~/.config/nvim/lua/config/plugins/'
 
 #hypr
-alias ch='cd ~/.config/hypr && nvim ~/.config/hypr/hyprland.conf'
-alias chk='cd ~/.config/hypr && nvim ~/.config/hypr/conf/keybinds.conf'
-alias che='cd ~/.config/hypr && nvim ~/.config/hypr/conf/execs.conf'
-alias chm='cd ~/.config/hypr && nvim ~/.config/hypr/conf/monitors.conf'
+alias ch='nvim ~/.config/hypr/hyprland.conf'
+alias chk='nvim ~/.config/hypr/conf/keybinds.conf'
+alias che='nvim ~/.config/hypr/conf/execs.conf'
+alias chm='nvim ~/.config/hypr/conf/monitors.conf'
 alias reloadLock="hyprctl --instance 0 'dispatch exec hyprlock'"
 
-alias cy='cd ~/.config/yazi && nvim ~/.config/yazi/yazi.toml'
-alias cw='cd ~/.config/waybar && nvim ~/.config/waybar/config.jsonc'
+alias cy='nvim ~/.config/yazi/yazi.toml'
+alias cw='nvim ~/.config/waybar/config.jsonc'
 alias cdd='cd ~/.local/share/dots/'
 
 alias mss='sudo mount -t nfs4 mathisserver.local:/  ~/Videos/Serien/mathisserver'
@@ -32,6 +33,9 @@ alias gd='git diff'
 alias ga='git add .'
 alias gc='git commit -m '
 alias gp='git push'
+alias gcm='git checkout main'
+
+alias z='zathura'
 
 # Yazi shell wrapper
 function y() {

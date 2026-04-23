@@ -1898,3 +1898,4 @@ exit
 ツ sugoi smile smiley japanese
 ≥ greater equals sign
 ≤ less equals sign
+x̃ x tilde quantil 

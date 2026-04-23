@@ -2,7 +2,8 @@
 
 tmppic="/tmp/wallpic"
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers/tuff" 
-WALL="$HOME/Pictures/Wallpapers/land" 
+WALL="$HOME/Pictures/Wallpapers/landschaften" 
+NEW="$HOME/Pictures/Wallpapers/newabm" 
 
 while : 
 do

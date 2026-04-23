@@ -85,7 +85,9 @@
     },
     "mpris#long": {
         //"format": "{player_icon} {dynamic}",
-        "format": "<i>{title} - {artist}</i>",
+        "player": "mpd",
+        "format": "<i>{dynamic}</i>",
+        "dynamic-order": ["title", "{dynamic-seperator}", "artist"],
         "player-icons": {
             "default": "▶",
             "mpv": "🎵"
@@ -152,7 +154,6 @@
     "format-icons": {
         "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
-        "full": ["󰂅"]
     }
 }
 }

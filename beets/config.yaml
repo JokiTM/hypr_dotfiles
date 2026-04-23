@@ -1,5 +1,5 @@
 directory: ~/Music
-library: ~/Music/.data/musiclibrary.db
+library: ~/.config/beets/musiclibrary.db
 import:
     move: yes
 clutter: 
@@ -11,7 +11,7 @@ clutter:
   - "*.cue"
   - "*.log"
   - "*.m3u"
-plugins: musicbrainz replaygain fetchart lastgenre info missing ftintitle edit lyrics convert
+plugins: musicbrainz replaygain fetchart lastgenre info missing ftintitle edit convert
 replaygain:
     threads: 32
     backend: ffmpeg

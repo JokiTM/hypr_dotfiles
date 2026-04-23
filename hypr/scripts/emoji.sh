@@ -1899,3 +1899,4 @@ exit
 ≥ greater equals sign
 ≤ less equals sign
 x̃ x tilde quantil 
+√ squareroot wurzel ziehen 

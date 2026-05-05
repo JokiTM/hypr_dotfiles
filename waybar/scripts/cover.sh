@@ -1,23 +1,16 @@
 #!/bin/sh
 
-#playerctl metadata | grep artUrl | awk '{ print $3 }'
-
-#status=$(playerctl status)
-
-#if [[ $player == "strawberry" ]]; then
-#    playerctl metadata | grep artUrl | awk '{ print $3 }' |  sed -r 's/file:\/\///'
-#elif [[ $player == "mpv" ]]; then
-#    echo "/home/mathis/.config/waybar/scripts/logos/mpv.png"
-#elif [[ $player == "vlc" ]]; then
-#    echo "/home/mathis/.config/waybar/scripts/logos/vlc.svg"
-#else
-#    echo "/home/mathis/.config/waybar/scripts/firefox.svg"
-#fi
-stat=$(playerctl status -a 2>&1)
+stat=$(playerctl status 2>&1)
 
 if [[ "$stat" = "No players found" ]]; then
     echo " "
     exit 1
+elif [[ $stat = "Paused" ]]; then
+    printf "/tmp/rmpcd-cover-art\n/tmp/rmpcd-cover-art"
+    exit 0
+elif [[ $stat = "Stopped" ]]; then
+    printf "         \n"
+    exit 0
 fi
 
 

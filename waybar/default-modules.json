@@ -84,23 +84,13 @@
         "interval": "once"
     },
     "mpris#long": {
-        //"format": "{player_icon} {dynamic}",
         "player": "mpd",
         "format": "<i>{dynamic}</i>",
         "dynamic-order": ["title", "{dynamic-seperator}", "artist"],
-        "player-icons": {
-            "default": "▶",
-            "mpv": "🎵"
-        },
-        "status-icons": {
-            "playing": "",
-            "paused": ""
-        },
         "on-click": "~/.config/waybar/scripts/media.sh",
         "on-click-right": "playerctl play-pause",
         "on-scroll-up": "playerctl -p mpd volume .05+",
         "on-scroll-down": "playerctl -p mpd volume .05-",
-        // "ignored-players": ["firefox"]
     },
     "mpris#short": {
         //"format": "{player_icon} {dynamic}",
@@ -139,8 +129,7 @@
         // "ignored-players": ["firefox"]
     },
     "image": {
-        "exec": "~/.config/waybar/scripts/cover.sh",
-        //"path": "/tmp/strawberry-cover-eidtfg.jpg",
+        "path": "/tmp/rmpcd-cover-art",
         "size": 24,
         "interval": 1,
         "on-click":  "hyprctl dispatch togglespecialworkspace music -q",

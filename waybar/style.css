@@ -94,8 +94,10 @@ tooltip label {
     color: @color5;
 }
 
-#mpris.long,
-#mpris.short {
+#mpris.long.paused,
+#mpris.short.paused, 
+#mpris.long.playing,
+#mpris.short.playing {
     color: @color5;
     border-radius: 0px 0rem 0rem 0px;
 }

@@ -20,7 +20,7 @@ return {
                     },
                 },
             })
-            vim.lsp.enable({ "lua_ls", "jdtls", "hyprls", "bashls", "csharp_ls", "html", "clangd", "rust_analyzer" })
+            vim.lsp.enable({ "lua_ls", "jdtls", "hyprls", "bashls", "csharp_ls", "html", "clangd", "rust_analyzer", "pylsp" })
 
             -- ltex verzögert starten
             vim.api.nvim_create_autocmd("BufReadPost", {

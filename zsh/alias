@@ -27,6 +27,8 @@ alias got='y ~/Videos/Serien/Game\ of\ Thrones/'
 alias bimp='beet imp ~/Piracy/Nicotine/'
 alias ms='mount ~/sansa'
 
+alias savepic='cp /tmp/catgirl "/home/mathis/Pictures/Wallpapers/sexyanime/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 12).$(magick identify -format "%m\n" /tmp/catgirl)"' 
+
 #git
 alias gs='git status'
 alias gd='git diff'

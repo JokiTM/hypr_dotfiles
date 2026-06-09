@@ -71,6 +71,7 @@
             "<C-U>":      Rescan,
             "R":          AddRandom,
             "<C-y>":      ExternalCommand(command: ["~/.config/rmpc/searchyt.sh"], description: "Search YouTube interactively"),
+            "<C-m>":      ExternalCommand(command: ["foot", "-T", "wiremix", "zsh", "-c", "~/.config/hypr/scripts/dispatch.sh ~/.config/rmpc/fzf-art.sh"], description: "Search fuzzy with cover-preview"),
         },
         navigation: {
             "<C-c>":      Close,
@@ -146,6 +147,21 @@
         album_sort_by: Date,
         album_date_tags: [Date],
     ),
+    components: {
+    "logo": Split(
+        direction: Vertical,
+        panes: [
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("test"))])) ),
+        ],
+    ),
+    "state": Pane(Property(
+        content: [
+            (kind: Text("["), style: (fg: "yellow", modifiers: "Bold")),
+            (kind: Property(Status(StateV2())), style: (fg: "yellow", modifiers: "Bold")),
+            (kind: Text("]"), style: (fg: "yellow", modifiers: "Bold")),
+        ], align: Left,
+    )),
+    },    
     tabs: [
         (
             name: "Playing",
@@ -308,7 +324,7 @@
                   direction: Vertical,
                   panes: [ 
                   (pane: Pane(AlbumArt), size: "40%"),
-                  (pane: Pane(Empty()), size: "60%"),
+                  (pane: Component("state"), size: "60%"),
                   ],
                   ),
              ),
@@ -316,5 +332,7 @@
              ],
              )
         ),
+    ],
+)),        ),
     ],
 )

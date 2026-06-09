@@ -6,12 +6,17 @@ HISTFILE="$XDG_STATE_HOME"/zsh/history
 [ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
 
+#Help
+unalias run-help
+autoload run-help
+HELPDIR=/usr/share/zsh/"${ZSH_VERSION}"/help
+alias help=run-help
 
 # Lines configured by zsh-newuser-install
 HISTFILE="$XDG_STATE_HOME"/zsh/history
 HISTSIZE=999999999
 SAVEHIST=1000
-setopt autocd beep nomatch notify
+setopt autocd beep nomatch notify hist_ignore_dups share_history
 unsetopt extendedglob
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall

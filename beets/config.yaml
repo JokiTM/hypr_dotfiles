@@ -27,3 +27,6 @@ lyrics:
   auto: yes
   synced: yes
   force: no
+lastgenre:
+  auto: yes
+  canonical: yes

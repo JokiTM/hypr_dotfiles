@@ -192,7 +192,7 @@ exit
 🖕 middle finger hand fingers rude middle flipping
 👇 backhand index pointing down fingers hand direction down
 ☝️ index pointing up hand fingers direction up
-👍 thumbs up thumbsup yes awesome good agree accept cool hand like +1
+👍 thumbs up thumbsup yes awesome good agree accept cool hand like +1 daumen
 👎 thumbs down thumbsdown no dislike hand -1
 🫆 Fingerprint
 ✊ raised fist fingers hand grasp

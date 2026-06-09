@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 # Import colorscheme from 'wal' asynchronously
 (cat ~/.cache/wal/sequences &)
 # Alternative (blocks terminal for 0-3ms)

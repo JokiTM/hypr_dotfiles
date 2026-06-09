@@ -22,6 +22,7 @@ unsetopt extendedglob
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/mathis/.config/zsh/.zshrc'
 
+FPATH="$ZDOTDIR/comp:$FPATH"
 autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 zstyle ':completion:*' menu select

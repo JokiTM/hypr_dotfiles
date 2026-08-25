@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
 
 tmppic="/tmp/wallpic"
+WALLPAPERS="$HOME/Pictures/Wallpapers" 
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers/tuff" 
 WALL="$HOME/Pictures/Wallpapers/landschaften" 
 NEW="$HOME/Pictures/Wallpapers/newabm" 
+TUX="$HOME/Pictures/Wallpapers/tuff" 
+ART="$HOME/Pictures/Wallpapers/Art" 
 
 while : 
 do
     CURRENT_WALL=$(cat "$tmppic")
 
     # Get a random wallpaper that is not the current one
-    WALLPAPER=$(find "$WALLPAPER_DIR" "$WALL" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
+    WALLPAPER=$(find "$WALLPAPERS" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
     echo "$WALLPAPER" > $tmppic
     echo "$WALLPAPER"
 

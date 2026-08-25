@@ -95,6 +95,7 @@ exit
 😯 hushed face face woo shh
 😲 astonished face face xox surprised poisoned
 😳 flushed face face blush shy flattered sex
+🫪 schwul verzerrt distorted sex 
 🥺 pleading face face begging mercy
 😦 frowning face with open mouth face aw what
 😧 anguished face face stunned nervous

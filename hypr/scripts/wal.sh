@@ -8,4 +8,6 @@ wal -i "$1" > /dev/null
 ~/.config/zathura/genzathurarc &
 touch ~/.config/rmpc/pywal16.ron &
 kill -SIGUSR2 $(pgrep btop)
+razer-cli -a
+razer-cli -d 'Razer Basilisk Ultimate (Receiver)' -b 10
 hyprctl reload &

@@ -131,7 +131,7 @@
         // "ignored-players": ["firefox"]
     },
     "image": {
-        "path": "/tmp/rmpcd-cover-art",
+        "exec": "ls ~/.cache/rmpcd/albumart/*",
         "size": 24,
         "interval": 1,
         "on-click":  "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"music\")'",

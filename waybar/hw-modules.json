@@ -3,7 +3,7 @@
         "interval": 5,
         "format": "  {usage}%",
         "max-length": 10,
-        "on-click": "hyprctl dispatch togglespecialworkspace sysmon -q"
+        "on-click": "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"sysmon\")'"
     },
     "custom/cpu-temp": {
         "exec": "~/.config/waybar/scripts/cpu.sh",
@@ -13,30 +13,30 @@
         "interval": 5,
         "format": "   {}%",
         "max-length": 10,
-        "on-click": "hyprctl dispatch togglespecialworkspace sysmon -q"
+        "on-click": "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"sysmon\")'"
     },
     "custom/gpu": {
         "interval": 5,
         "format": "󰾲   {}%",
         "exec": "~/.config/waybar/scripts/test.sh",
         "max-length": 10,
-        "on-click": "hyprctl dispatch togglespecialworkspace sysmon -q"
+        "on-click": "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"sysmon\")'"
     },
     "custom/vram": {
         "interval": 5,
         "format": "{} GiB Used",
         "exec": "~/.config/waybar/scripts/gpu.sh vram",
-        "on-click": "hyprctl dispatch togglespecialworkspace sysmon -q"
+        "on-click": "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"sysmon\")'"
     },
     "custom/gpu-temp": {
         "exec": "~/.config/waybar/scripts/gpu.sh temp",
         "interval": 5,
-        "on-click": "hyprctl dispatch togglespecialworkspace sysmon -q"
+        "on-click": "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"sysmon\")'"
     },
     "custom/mouse": {
         "format": "󰍽  {}%",
         "exec": "~/.config/waybar/scripts/mouse.sh",
-        "on-click": "notify-send rong",
+        "on-click": "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"sysmon\")'",
         "interval": 60
     },
     "group/cpu": {

@@ -14,8 +14,8 @@
             "sysmon": "",
             "whatsapp": "󰖣"
         },
-        "on-scroll-down": "hyprctl dispatch workspace +1",
-        "on-scroll-up": "hyprctl dispatch workspace -1"
+        "on-scroll-down": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"e+1\" }))'",
+        "on-scroll-up": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"e-1\" }))'"
     },
     "tray": {
         "icon-size": 21,
@@ -28,6 +28,7 @@
         //"format": " {:%H:%M}"
         "tooltip-format": "<tt>{calendar}</tt>",
         "format": "󰥔 {:%H:%M}",
+        "format-alt": "󰥔 {:%H:%M:%S}",
         "calendar": {
         //    "mode": "month",
         //    "mode-mon-col": 3,
@@ -95,6 +96,7 @@
     "mpris#short": {
         //"format": "{player_icon} {dynamic}",
         "format": "<i>{title}</i>",
+        "player": "mpd",
         "max-length": 60,
         "player-icons": {
             "default": "▶",
@@ -132,7 +134,7 @@
         "path": "/tmp/rmpcd-cover-art",
         "size": 24,
         "interval": 1,
-        "on-click":  "hyprctl dispatch togglespecialworkspace music -q",
+        "on-click":  "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"music\")'",
         "on-click-right": "~/.config/waybar/scripts/viewcover.sh",
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous"

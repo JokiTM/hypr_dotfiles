@@ -7,7 +7,6 @@ cat ~/.cache/wal/sequences
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
 
-fastfetch
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
@@ -16,6 +15,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-"$1"
+exec "$1"
 
-exit
+ 
+

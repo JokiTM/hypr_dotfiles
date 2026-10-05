@@ -25,6 +25,7 @@ exec = "chafa --size=${YAZI_PREVIEW_COLUMNS}x${YAZI_PREVIEW_LINES} $FILE"
   image = [
     { run = "swayimg %s", desc = "mpv", for = "linux" },
     { run = "~/.config/hypr/scripts/wal.sh %s", desc = "Set Wall", for = "linux" },
+    { run = "swayimg -g $(dirname %s)", desc = "Open Gallery", for = "linux" },
     #{ run = "vlc %s", desc = "vlc", for = "linux" },
   ]
 

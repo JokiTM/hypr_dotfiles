@@ -20,7 +20,17 @@ return {
                     },
                 },
             })
-            vim.lsp.enable({ "lua_ls", "jdtls", "hyprls", "bashls", "csharp_ls", "html", "clangd", "rust_analyzer", "pylsp" })
+
+            vim.lsp.config('rust-analyzer', {
+                settings = {
+                    ['rust-analyzer'] = {
+                        diagnostics = {
+                            enable = true;
+                        }
+                    }
+                }
+            })
+            vim.lsp.enable({ "lua_ls", "jdtls", "hyprls", "bashls", "csharp_ls", "html", "clangd", "rust-analyzer", "pylsp", "gopls" })
 
             -- ltex verzögert starten
             vim.api.nvim_create_autocmd("BufReadPost", {
@@ -33,8 +43,8 @@ return {
                 end,
             })
         end,
-        vim.keymap.set('n', '<space>ca', function()
-            vim.lsp.buf.code_action() end, bufopts)
+        vim.keymap.set('n', '<space>ca', function() vim.lsp.buf.code_action() end, {desc = ' Code Action'}),
+        vim.keymap.set('n', '<leader>cd', function() vim.diagnostic.open_float() end, {desc = ' Show diagnostics'}),
         },
         {
             "mason-org/mason.nvim",

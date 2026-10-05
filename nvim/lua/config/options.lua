@@ -1,30 +1,31 @@
--- zeug 
--- vim.opt.laststatus = 2
+vim.fn.serverstart()
+
 vim.opt.cursorline = true
 vim.opt.undofile = true
 
--- use spaces for tabs and whatnot
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 vim.opt.tabstop = 4
-vim.opt.signcolumn = "yes"
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
---vim.opt.winborder = "rounded"
+vim.opt.complete:append('o')
+vim.opt.autocomplete = true
+vim.opt.completeopt = { 'menuone', 'noselect' }
 
---Line numbers
-vim.wo.number = true
-vim.wo.relativenumber = true
+vim.opt.pumheight = 5
+vim.opt.pumborder = 'rounded'
 
 
---Window title
-vim.opt.title = true
-vim.opt.titlelen = 0
-vim.opt.titlestring = "nvim %t"
+vim.keymap.set('n', '<leader>s', ':w<CR>:source %<CR>')
 
---Use system clipboard
 vim.opt.clipboard = "unnamedplus"
 
--- Highlight yanked text
+vim.wo.number = true
+vim.wo.relativenumber = true
+vim.opt.signcolumn = "yes"
+
 vim.api.nvim_create_autocmd("TextYankPost", {
   pattern = "*",
   callback = function()
@@ -32,29 +33,14 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
---Spell check
-local spell_types = { "text", "plaintex", "typst", "gitcommit", "markdown", "tex" }
-vim.opt.spell = false
-vim.api.nvim_create_augroup("Spellcheck", { clear = true })
-vim.api.nvim_create_autocmd({ "FileType" }, {
-    group = "Spellcheck", 
-    pattern = spell_types,
-    callback = function()
-        vim.opt_local.spell = true
-        vim.opt_local.spelllang = { "de" , "en"}
-    end,
-    desc = "Enable spellcheck for defined filetypes",
-}
-)
-vim.api.nvim_create_autocmd("BufWinLeave", {
-        pattern = "?*",
-        callback = function()
-               pcall(vim.cmd.mkview)
-            end
-    })
-vim.api.nvim_create_autocmd("BufWinEnter", {
-        pattern = "?*",
-        callback = function()
-               pcall(vim.cmd.loadview)
-            end
-    })
+vim.cmd [[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+]]
+
+
+vim.opt_local.spell = true
+vim.opt_local.spelllang = { "de" , "en"}
+

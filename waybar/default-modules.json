@@ -77,13 +77,6 @@
             "deactivated": ""
         }
     },
-    "custom/vpn": {
-        "format": " {}",
-        "exec": "~/.config/waybar/scripts/vpnstat.sh",
-        "on-click": "~/.local/bin/vpntoggle.sh",
-        "signal": 1,
-        "interval": "once"
-    },
     "mpris#long": {
         "player": "mpd",
         "format": "<i>{dynamic}</i>",

@@ -11,6 +11,7 @@ mako/config.old
 zathura/zathurarc
 rmpc/pywal16.ron
 btop/themes/pywal16.theme
+btop/themes/btop.theme
 mpd/*
 !mpd/mpd.conf
-
+zsh/secrets.sh

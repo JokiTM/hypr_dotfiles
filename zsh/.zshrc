@@ -1,5 +1,7 @@
 source $ZDOTDIR/XDG_ENV.sh
-source $ZDOTDIR/secrets.sh
+if [ -f $ZDOTDIR/secrets.sh ]; then
+    source $ZDOTDIR/secrets.sh
+fi
 
 # Use XDG dirs for completion and history files
 [ -d "$XDG_STATE_HOME"/zsh ] || mkdir -p "$XDG_STATE_HOME"/zsh

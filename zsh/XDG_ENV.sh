@@ -15,3 +15,9 @@ export MAVEN_ARGS="--settings $XDG_CONFIG_HOME/maven/settings.xml"
 
 # wget
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+
+export GOPATH="$XDG_DATA_HOME"/go
+
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc 
+
+export HISTFILE="${XDG_STATE_HOME}"/bash/history

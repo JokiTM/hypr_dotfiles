@@ -9,6 +9,7 @@ alias cza='nvim ~/.config/zsh/alias'
 alias cr='source ~/.config/zsh/.zshrc'
 alias cn='nvim'
 alias cnp='cd ~/.config/nvim/lua/plugins/ && nvim ~/.config/nvim/lua/config/plugins/'
+alias dwl='SVDIR=$HOME/service dbus-run-session ~/Projects/dwl/dwl -s "exec runsvdir ~/service"'
 
 #hypr
 alias ch='nvim ~/.config/hypr/hyprland.conf'
@@ -26,8 +27,11 @@ alias mss='sudo mount -t nfs4 mathisserver.local:/  ~/Videos/Serien/mathisserver
 
 alias got='y ~/Videos/Serien/Game\ of\ Thrones/'
 
-alias bimp='beet imp ~/Piracy/Nicotine/'
+alias bimp='beet imp ~/.local/share/nicotine/downloads/'
 alias ms='mount ~/sansa'
+alias ums='umount ~/sansa'
+alias mn='mount ~/Nas'
+alias umn='umount ~/Nas'
 
 alias savepic='cp /tmp/catgirl "/home/mathis/Pictures/Wallpapers/sexyanime/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 12).$(magick identify -format "%m\n" /tmp/catgirl)"' 
 
@@ -38,8 +42,18 @@ alias ga='git add .'
 alias gc='git commit -m '
 alias gp='git push'
 alias gcm='git checkout main'
+alias gl='git log --oneline --graph --decorate --all'
 
 alias z='zathura'
+
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+export LESS='--RAW-CONTROL-CHARS --use-color -Dd+r -Du+b'
+export MANPAGER="bat -plman"
+
+batdiff() {
+    git diff --name-only --relative --diff-filter=d -z | xargs -0 bat --diff
+}
 
 # Yazi shell wrapper
 function y() {

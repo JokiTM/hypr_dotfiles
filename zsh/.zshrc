@@ -93,9 +93,23 @@ else
     fastfetch
 fi
 
+toggleMon() {
+    hyprctl monitors | grep "DP-3"
+    if [ $? = 0 ]; then
+        hyprctl eval 'hl.monitor({ output = "DP-3", disabled = true })'
+    else
+        hyprctl eval 'hl.monitor({ output = "DP-3", disabled = false })'
+    fi
+
+}
+
+
 # Import colorscheme from 'wal' asynchronously
 (cat ~/.cache/wal/sequences &)
 # Alternative (blocks terminal for 0-3ms)
 cat ~/.cache/wal/sequences
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
+
+# Use current command as window name
+preexec() { printf "\x1b]0;%s\x07" "$1"; }

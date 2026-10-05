@@ -20,7 +20,19 @@ return {
                     },
                 },
             })
-            vim.lsp.enable({ "lua_ls", "jdtls", "hyprls", "bashls", "csharp_ls", "html", "clangd", "rust_analyzer", "pylsp" })
+            vim.lsp.config("lua_ls", {
+                settings = {
+                    Lua = {
+                        workspace = {
+                            library = {
+                                ["/usr/share/swayimg/swayimg.lua"] = true,
+                                ["/usr/share/hypr/stubs"] = true,
+                            },
+                        },
+                    },
+                },
+            })
+            vim.lsp.enable({ "lua_ls", "jdtls", "hyprls", "bashls", "csharp_ls", "html", "clangd", "rust_analyzer", "pylsp", "gopls" })
 
             -- ltex verzögert starten
             vim.api.nvim_create_autocmd("BufReadPost", {

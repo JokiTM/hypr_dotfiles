@@ -1,6 +1,6 @@
 -- zeug 
 -- vim.opt.laststatus = 2
--- vim.opt.cursorline = true
+vim.opt.cursorline = true
 vim.opt.undofile = true
 
 -- use spaces for tabs and whatnot

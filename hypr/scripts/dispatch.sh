@@ -16,6 +16,11 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+if [ "$1" == "nmtui-connect" ]; then
+    nmcli device wifi rescan
+fi
+
+
 "$1"
 
 exit

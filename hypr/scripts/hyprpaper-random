@@ -7,15 +7,13 @@ NEW="$HOME/Pictures/Wallpapers/newabm"
 
 while : 
 do
-    CURRENT_WALL=$(cat "$tmppic")
-
-    # Get a random wallpaper that is not the current one
-    WALLPAPER=$(find "$WALLPAPER_DIR" "$WALL" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
-    echo "$WALLPAPER" > $tmppic
-    echo "$WALLPAPER"
-
-    # Apply the selected wallpaper
-    ~/.config/hypr/scripts/wal.sh "$WALLPAPER"
-    
-    sleep 900
+    find "$WALLPAPER_DIR" "$WALL" "$NEW" \
+        -type f \
+        -print0 |
+    shuf -z |
+    while IFS= read -r -d '' WALLPAPER; do
+        echo "$WALLPAPER"
+        ~/.config/hypr/scripts/wal.sh "$WALLPAPER"
+        sleep 900
+    done
 done 

@@ -32,7 +32,7 @@ exit
 😆 grinning squinting face happy joy lol satisfied haha face glad XD laugh
 😅 grinning face with sweat face hot happy laugh sweat smile relief
 🤣 rolling on the floor laughing face rolling floor laughing lol haha rofl
-😂 face with tears of joy face cry tears weep happy happytears haha
+😂 laughing face with tears of joy face cry tears weep happy happytears haha
 🙂 slightly smiling face face smile
 🙃 upside down face face flipped silly smile
 😉 winking face face happy mischievous secret ;) smile eye
@@ -114,7 +114,7 @@ exit
 😤 face with steam from nose face gas phew proud pride
 😡 pouting face angry mad hate despise
 😠 angry face mad face annoyed frustrated
-🤬 face with symbols on mouth face swearing cursing cussing profanity expletive
+🤬 angry face with symbols on mouth face swearing cursing cussing profanity expletive
 😈 smiling face with horns devil horns
 👿 angry face with horns devil angry horns
 💀 skull dead skeleton creepy death
@@ -192,7 +192,11 @@ exit
 🖕 middle finger hand fingers rude middle flipping
 👇 backhand index pointing down fingers hand direction down
 ☝️ index pointing up hand fingers direction up
+<<<<<<< Updated upstream
 👍 thumbs up thumbsup yes awesome good agree accept cool hand like +1 daumen
+=======
+👍 daumen thumbs up thumbsup yes awesome good agree accept cool hand like +1
+>>>>>>> Stashed changes
 👎 thumbs down thumbsdown no dislike hand -1
 🫆 Fingerprint
 ✊ raised fist fingers hand grasp

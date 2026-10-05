@@ -4,6 +4,7 @@ opac=$(hyprctl getoption decoration:blur:passes | awk 'NR==1{print $2}')
 if [ -z $1 ];then
     notify-send "Usage: ./opacity [inc|dec]"
     echo "Usage: ./opacity [inc|dec]"
+    exit
 elif [ "$1" == "inc" ]; then
     ((opac++))
 elif [ "$1" == "dec" ]; then
@@ -11,6 +12,7 @@ elif [ "$1" == "dec" ]; then
 else
     notify-send "Usage: ./opacity [inc|dec]"
     echo "Usage: ./opacity [inc|dec]"
+    exit
 fi
 
 

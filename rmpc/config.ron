@@ -8,8 +8,8 @@
     cache_dir: "~/.cache/rmpc/",
     volume_step: 5,
     max_fps: 30,
-    scrolloff: 0,
-    wrap_navigation: false,
+    scrolloff: 4,
+    wrap_navigation: true,
     enable_mouse: true,
     scroll_amount: 1,
     enable_config_hot_reload: true,
@@ -71,7 +71,7 @@
             "<C-U>":      Rescan,
             "R":          AddRandom,
             "<C-y>":      ExternalCommand(command: ["~/.config/rmpc/searchyt.sh"], description: "Search YouTube interactively"),
-            "<C-m>":      ExternalCommand(command: ["foot", "-T", "wiremix", "zsh", "-c", "~/.config/hypr/scripts/dispatch.sh ~/.config/rmpc/fzf-art.sh"], description: "Search fuzzy with cover-preview"),
+            "<C-m>":      ExternalCommand(command: ["foot", "-T", "rmpc-overlay", "zsh", "-c", "~/.config/hypr/scripts/dispatch.sh ~/.config/rmpc/fzf-art.sh"], description: "Search fuzzy with cover-preview"),
         },
         navigation: {
             "<C-c>":      Close,
@@ -143,9 +143,9 @@
         ],
     ),
     artists: (
-        album_display_mode: NameOnly,
+        album_display_mode: SplitByDate,
         album_sort_by: Date,
-        album_date_tags: [Date],
+        album_date_tags: [OriginalDate],
     ),
     components: {
     "logo": Split(
@@ -333,6 +333,6 @@
              )
         ),
     ],
-)),        ),
+),        ),
     ],
 )

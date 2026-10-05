@@ -72,6 +72,7 @@ tooltip label {
 #custom-mouse,
 #submap,
 #custom-soypower,
+#network,
 #custom-power {
   background-color: @color0;
   padding: 0.5rem 1rem;
@@ -90,6 +91,10 @@ tooltip label {
 }
 
 #custom-vpn{
+    border-radius: 0rem 0px 0px 0rem;
+    color: @color5;
+}
+#network{
     border-radius: 1rem 0px 0px 1rem;
     color: @color5;
 }

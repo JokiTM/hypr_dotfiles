@@ -23,25 +23,29 @@ tooltip label {
   color: @color5;
 }
 
-#workspaces {
+#workspaces,
+#tags {
   border-radius: 1rem;
   margin: 5px;
   background-color: @color0;
   margin-left: 1.5rem;
 }
 
-#workspaces button {
+#workspaces button,
+#tags button {
   color: @color1;
   border-radius: 1rem;
   padding: 0.4rem;
 }
 
-#workspaces button.active {
+#workspaces button.active,
+#tags button.focused {
   color: @color7;
   border-radius: 1rem;
 }
 
-#workspaces button:hover {
+#workspaces button:hover,
+#tags button:hover {
   color: @color16;
   background: none;
   box-shadow: none;

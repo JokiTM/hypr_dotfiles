@@ -3,7 +3,7 @@
         "position": "top", // Waybar position (top|bottom|left|right)
         "height": 48,
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces", "cpu", "memory", "group/gpu", "custom/mouse", "hyprland/submap"],
+        "modules-left": ["hyprland/workspaces", "dwl/tags", "cpu", "memory", "group/gpu", "custom/mouse", "hyprland/submap"],
         "modules-center": ["image", "mpris#long", "mpris#icon"],
         "modules-right": ["pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
         "output": "DP-3",
@@ -17,7 +17,7 @@
     { "layer": "bottom", // Waybar at top layer
         "position": "top", // Waybar position (top|bottom|left|right)
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces", "cpu", "memory","group/gpu",  "custom/mouse"],
+        "modules-left": ["hyprland/workspaces", "dwl/tags", "cpu", "memory","group/gpu",  "custom/mouse"],
         "modules-center": ["image", "mpris#short", "mpris#icon"],
         "modules-right": ["pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
         "output": "DP-1",

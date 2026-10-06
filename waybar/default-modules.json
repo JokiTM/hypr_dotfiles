@@ -76,7 +76,6 @@
         "on-scroll-down": "playerctl -p mpd volume .05-",
     },
     "mpris#short": {
-        //"format": "{player_icon} {dynamic}",
         "format": "<i>{title}</i>",
         "player": "mpd",
         "max-length": 60,
@@ -92,10 +91,8 @@
         "on-click-right": "playerctl play-pause",
         "on-scroll-up": "playerctl -p mpd volume .05+",
         "on-scroll-down": "playerctl -p mpd volume .05-",
-        // "ignored-players": ["firefox"]
     },
     "mpris#icon": {
-        //"format": "{player_icon} {dynamic}",
         "format": "{status_icon}",
         "max-length": 60,
         "player-icons": {
@@ -110,7 +107,6 @@
         "on-click-right": "playerctl play-pause",
         "on-scroll-up": "playerctl -p mpd volume .05+",
         "on-scroll-down": "playerctl -p mpd volume .05-",
-        // "ignored-players": ["firefox"]
     },
     "image": {
         "exec": "ls ~/.cache/rmpcd/albumart/*",

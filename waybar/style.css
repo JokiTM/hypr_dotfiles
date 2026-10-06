@@ -71,7 +71,6 @@ tooltip label {
 #custom-vram,
 #custom-mouse,
 #submap,
-#custom-soypower,
 #network,
 #custom-power,
 menu {
@@ -163,7 +162,6 @@ menu {
   margin-left: 1rem;
 }
 
-#custom-soypower,
 #custom-power,
 menu {
     margin-right: 1rem;

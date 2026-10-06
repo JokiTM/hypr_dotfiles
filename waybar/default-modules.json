@@ -70,12 +70,6 @@
             "hibernate": "loginctl hibernate",
         },
     },
-    "custom/soypower": {
-        "tooltip": false,
-        "on-click": "~/.config/waybar/scripts/hibernate.sh",
-        "on-click-right": "wlogout &",
-        "format": "⏻"
-    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {

@@ -8,3 +8,6 @@ require("nvim-tree").setup {
 }
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "nvim-tree: Open", buffer = bufnr, noremap = true, silent = true, nowait = true} )
 
+local wk = require('which-key')
+wk.add({'<leader>e', icon = { icon = '󰉋', color = 'green'}})
+

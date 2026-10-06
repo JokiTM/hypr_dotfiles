@@ -50,6 +50,7 @@
     "custom/power": {
         "format": "⏻",
         "tooltip": false,
+        "on-click-middle": "loginctl hibernate",
         "menu": "on-click",
         "menu-file": "~/.config/waybar/power_menu.xml",
         "menu-actions": {

@@ -59,10 +59,16 @@
         "format": ""
     },
     "custom/power": {
+        "format": "⏻",
         "tooltip": false,
-        "on-click": "loginctl hibernate",
-        "on-click-right": "wlogout &",
-        "format": "⏻"
+        "menu": "on-click",
+        "menu-file": "~/.config/waybar/power_menu.xml",
+        "menu-actions": {
+            "shutdown": "loginctl shutdown",
+            "reboot": "loginctl reboot",
+            "suspend": "loginctl suspend",
+            "hibernate": "loginctl hibernate",
+        },
     },
     "custom/soypower": {
         "tooltip": false,

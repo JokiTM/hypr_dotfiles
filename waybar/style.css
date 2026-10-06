@@ -73,7 +73,8 @@ tooltip label {
 #submap,
 #custom-soypower,
 #network,
-#custom-power {
+#custom-power,
+menu {
   background-color: @color0;
   padding: 0.5rem 1rem;
   margin: 5px 0;
@@ -163,7 +164,8 @@ tooltip label {
 }
 
 #custom-soypower,
-#custom-power {
+#custom-power,
+menu {
     margin-right: 1rem;
     border-radius: 0px 1rem 1rem 0px;
     color: @color5;

@@ -6,7 +6,7 @@
         "modules-left": ["hyprland/workspaces", "dwl/tags", "cpu", "memory", "group/gpu", "custom/mouse", "hyprland/submap"],
         "modules-center": ["image", "mpris#long", "mpris#icon"],
         "modules-right": ["pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
-        "output": "DP-3",
+        "output": "DP-1",
         "include": "~/.config/waybar/default-modules.json",
         "hyprland/submap": {
             "format": "{}",
@@ -20,7 +20,7 @@
         "modules-left": ["hyprland/workspaces", "dwl/tags", "cpu", "memory","group/gpu",  "custom/mouse"],
         "modules-center": ["image", "mpris#short", "mpris#icon"],
         "modules-right": ["pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
-        "output": "DP-1",
+        "output": "DP-2",
         "include": "~/.config/waybar/default-modules.json"
     },
     { "layer": "bottom", // Waybar at top layer

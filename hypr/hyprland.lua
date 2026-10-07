@@ -1,4 +1,5 @@
 require('conf.exec')
+require('conf.monitors')
 require('conf.keybinds')
 require('conf.env')
 require('conf.misc')

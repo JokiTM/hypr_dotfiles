@@ -314,7 +314,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind(mainMod .. " + return", hl.dsp.exec_cmd("foot"))
 hl.bind(mainMod .. " + kp_enter", hl.dsp.exec_cmd("foot"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close(), { repeating = true })
-hl.bind(mainMod .. "+ ALT + BACKSPACE", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind("CTRL + ALT + BACKSPACE", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("rong"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("librewolf"))
 hl.bind(mainMod .. " + space", hl.dsp.window.float({ action = "toggle" }))

@@ -26,7 +26,7 @@
     { "layer": "bottom", // Waybar at top layer
         "position": "top", // Waybar position (top|bottom|left|right)
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces", "cpu", "memory", "battery"],
+        "modules-left": ["hyprland/workspaces", "dwl/tags", "cpu", "memory", "battery"],
         "modules-center": ["image", "mpris#long", "mpris#icon"],
         "modules-right": ["network", "pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
         "output": "eDP-1",
@@ -35,7 +35,7 @@
     { "layer": "bottom", // Waybar at top layer
         "position": "top", // Waybar position (top|bottom|left|right)
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces", "cpu", "memory", "battery"],
+        "modules-left": ["hyprland/workspaces", "dwl/tags", "cpu", "memory", "battery"],
         "modules-center": ["image", "mpris#long", "mpris#icon"],
         "modules-right": ["network", "pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
         "output": "HDMI-A-2",

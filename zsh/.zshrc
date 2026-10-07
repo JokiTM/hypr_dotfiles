@@ -90,11 +90,11 @@ bindkey '^R' fzf-history-widget
 source $ZDOTDIR/plugins/git-prompt.zsh/git-prompt.zsh
 source $ZDOTDIR/plugins/git-prompt.zsh/examples/default.zsh
 
-if [ -z "$WAYLAND_DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-  exec dbus-run-session start-hyprland
-else
-    fastfetch
-fi
+#if [ -z "$WAYLAND_DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+#  exec dbus-run-session start-hyprland
+#else
+#    fastfetch
+#fi
 
 toggleMon() {
     hyprctl monitors | grep "DP-3"

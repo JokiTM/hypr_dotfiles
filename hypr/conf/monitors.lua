@@ -31,6 +31,13 @@ if laptop then
         position = "0x0",
         scale    = "1",
     })
+    -- Uni Projektor
+    hl.monitor({
+        output   = "",
+        scale    = "1",
+        position = "auto",
+        mirror   = "eDP-1",
+    })
 end
 
 

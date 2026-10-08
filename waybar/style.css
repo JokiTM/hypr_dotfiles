@@ -47,6 +47,10 @@ tooltip label {
   border-radius: 1rem;
 }
 
+#tags button.urgent {
+  color: @color5;
+}
+
 #workspaces button:hover,
 #tags button:hover {
   color: @color16;

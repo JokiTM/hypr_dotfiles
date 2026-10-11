@@ -1,0 +1,25 @@
+#!/bin/sh
+
+mount | grep Nas &>/dev/null
+
+if [ $? == 1 ]; then
+    echo Mounting Nas
+    mount ~/Nas || exit 1
+else 
+    echo Nas already mounted
+fi
+
+wtfamisyncing=music
+echo "Syncing music..." 
+rsync -ah --delete --info=progress2 ~/Music/ ~/Nas/Medien/Musik/
+rsync -ah --delete --info=progress2 ~/.config/mpd/playlists/ ~/Nas/Medien/Playlists/
+
+wtfamisyncing=books
+echo "Syncing books..." 
+rsync -ah --info=progress2 ~/Books/ ~/Nas/Medien/Books/
+
+
+wtfamisyncing=pics
+echo "Syncing pics..." 
+rsync -ah --info=progress2 --exclude nsfw --exclude sexyanime --exclude LukePaper --exclude gifs ~/Pictures/Wallpapers/ ~/Nas/Medien/Fotos/Wallpapers
+rsync -ah --info=progress2 --exclude Wallpapers ~/Pictures/Fotos/ ~/Nas/Medien/Fotos/

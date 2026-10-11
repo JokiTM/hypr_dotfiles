@@ -1,0 +1,5 @@
+#!/bin/env bash
+
+grep -r --color=always "$1" ~/.config/mpd/playlists/
+
+

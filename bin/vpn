@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+ip link show | grep vpn 2>&1 1>/dev/null
+
+isactive=$?
+
+
+if [ $1 == "toggle" ]; then
+    if [ $isactive = 1 ]; then
+        nmcli connection up vpn > /dev/null
+    else
+        nmcli connection down vpn > /dev/null
+    fi
+elif [ $1 == "status" ]; then
+    if [ $isactive = 1 ]; then
+        echo 󰦜
+    else
+        echo 󰒙
+    fi
+fi

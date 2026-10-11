@@ -51,6 +51,8 @@ alias grep='grep --color=auto'
 export LESS='--RAW-CONTROL-CHARS --use-color -Dd+r -Du+b'
 export MANPAGER="bat -plman"
 
+alias dwl='exec dbus-run-session dwl >~/.local/log/dwl.log 2>&1'
+
 batdiff() {
     git diff --name-only --relative --diff-filter=d -z | xargs -0 bat --diff
 }

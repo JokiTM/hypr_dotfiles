@@ -31,7 +31,8 @@ compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs ..
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh End of lines added by compinstall
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 
+#End of lines added by compinstall
 
 autoload -U tetris
 
@@ -90,11 +91,12 @@ bindkey '^R' fzf-history-widget
 source $ZDOTDIR/plugins/git-prompt.zsh/git-prompt.zsh
 source $ZDOTDIR/plugins/git-prompt.zsh/examples/default.zsh
 
-#if [ -z "$WAYLAND_DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-#  exec dbus-run-session start-hyprland
+if [ -z "$WAYLAND_DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+    export XDG_CURRENT_DESKTOP=wlr
+    exec dbus-run-session dwl >~/.local/log/dwl.log 2>&1
 #else
 #    fastfetch
-#fi
+fi
 
 toggleMon() {
     hyprctl monitors | grep "DP-3"

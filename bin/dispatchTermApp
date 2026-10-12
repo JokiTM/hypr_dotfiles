@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+foot -T "$1" zsh -c "initTerm $1"

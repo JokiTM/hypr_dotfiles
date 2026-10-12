@@ -42,7 +42,7 @@
         "format-icons": {
             "default": ["", "", " "]
         },
-        "on-click": "pkill wiremix || foot -T wiremix zsh -c '~/.config/hypr/scripts/dispatch.sh wiremix'",
+        "on-click": "pkill wiremix || dispatchTermApp wiremix",
         "on-click-right": "~/.config/waybar/scripts/toggleAudioDevice.sh"
     },
     "custom/lock": {
@@ -131,7 +131,7 @@
     },
     "network": {
         "format": "󰖪",
-        "on-click": "pkill nmtui-connect || foot -T 'nmtui-connect' zsh -c '~/.config/hypr/scripts/dispatch.sh 'nmtui-connect''",
+        "on-click": "pkill nmtui-connect || dispatchTermApp nmtui-connect",
         "interval": 5,
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "󰇚 {bandwidthDownBits} | 󰕒 {bandwidthUpBits}",

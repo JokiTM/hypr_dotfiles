@@ -7,9 +7,9 @@ isactive=$?
 
 if [ $1 == "toggle" ]; then
     if [ $isactive = 1 ]; then
-        nmcli connection up vpn > /dev/null
+        nmcli connection up $2 > /dev/null
     else
-        nmcli connection down vpn > /dev/null
+        nmcli connection down $2 > /dev/null
     fi
 elif [ $1 == "status" ]; then
     if [ $isactive = 1 ]; then

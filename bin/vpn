@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ip link show | grep vpn 2>&1 1>/dev/null
+ip link show | grep $2 2>&1 1>/dev/null
 
 isactive=$?
 

@@ -146,7 +146,7 @@
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
     },
     "custom/vpn": {
-        "exec": "vpn status",
+        "exec": "vpn status vpn",
         "exec-on-event": true,
         "on-click": "vpn toggle vpn",
         "interval": 1,

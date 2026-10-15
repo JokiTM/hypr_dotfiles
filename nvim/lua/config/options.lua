@@ -44,3 +44,11 @@ vim.cmd [[
 vim.opt_local.spell = true
 vim.opt_local.spelllang = { "de" , "en"}
 
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    local dir = vim.fn.expand("%:p:h")
+    if dir ~= "" then
+      vim.cmd.cd(dir)
+    end
+  end,
+})

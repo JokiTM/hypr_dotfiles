@@ -61,7 +61,8 @@ tooltip label {
 #battery,
 #pulseaudio,
 #custom-lock,
-#custom-vpn,
+#custom-vpn-heimnetz,
+#custom-vpn-proton,
 #cpu,
 #temperature.cpu,
 #memory,
@@ -96,7 +97,8 @@ menu {
 
 #image,
 #cpu,
-#custom-vpn{
+#custom-vpn-proton,
+#custom-vpn-heimnetz{
     color: @color5;
 }
 

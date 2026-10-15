@@ -145,10 +145,16 @@
         "max-length": 50,
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
     },
-    "custom/vpn": {
+    "custom/vpn-proton": {
         "exec": "vpn status vpn",
         "exec-on-event": true,
         "on-click": "vpn toggle vpn",
+        "interval": 1,
+    },
+    "custom/vpn-heimnetz": {
+        "exec": "vpn status heimnetz",
+        "exec-on-event": true,
+        "on-click": "vpn toggle heimnetz",
         "interval": 1,
     },
 }

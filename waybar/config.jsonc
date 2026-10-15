@@ -5,7 +5,7 @@
         "reload_style_on_change": true,
         "modules-left": ["hyprland/workspaces", "dwl/tags", "cpu", "memory", "group/gpu", "custom/mouse", "hyprland/submap"],
         "modules-center": ["image", "mpris#long", "mpris#icon"],
-        "modules-right": ["custom/vpn", "network", "pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
+        "modules-right": ["custom/vpn-proton", "network", "pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
         "output": "DP-1",
         "include": "~/.config/waybar/default-modules.json",
         "hyprland/submap": {
@@ -19,7 +19,7 @@
         "reload_style_on_change": true,
         "modules-left": ["hyprland/workspaces", "dwl/tags", "cpu", "memory","group/gpu",  "custom/mouse"],
         "modules-center": ["image", "mpris#short", "mpris#icon"],
-        "modules-right": ["custom/vpn", "network", "pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
+        "modules-right": ["custom/vpn-proton", "network", "pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
         "output": "DP-2",
         "include": "~/.config/waybar/default-modules.json"
     },
@@ -28,8 +28,8 @@
         "reload_style_on_change": true,
         "modules-left": ["hyprland/workspaces", "dwl/tags", "cpu", "memory", "battery"],
         "modules-center": ["image", "mpris#long", "mpris#icon"],
-        "modules-right": ["network", "pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
-        "output": "eDP-1",
+        "modules-right": ["custom/vpn-heimnetz", "network", "pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
+        "output": "LVDS-1",
         "include": "~/.config/waybar/default-modules.json"
     },
     { "layer": "bottom", // Waybar at top layer
@@ -37,7 +37,7 @@
         "reload_style_on_change": true,
         "modules-left": ["hyprland/workspaces", "dwl/tags", "cpu", "memory", "battery"],
         "modules-center": ["image", "mpris#long", "mpris#icon"],
-        "modules-right": ["network", "pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
+        "modules-right": ["custom/vpn-heimnetz", "network", "pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
         "output": "HDMI-A-2",
         "include": "~/.config/waybar/default-modules.json"
     }

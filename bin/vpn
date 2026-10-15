@@ -4,7 +4,6 @@ ip link show | grep $2 2>&1 1>/dev/null
 
 isactive=$?
 
-
 if [ $1 == "toggle" ]; then
     if [ $isactive = 1 ]; then
         nmcli connection up $2 > /dev/null
@@ -12,9 +11,17 @@ if [ $1 == "toggle" ]; then
         nmcli connection down $2 > /dev/null
     fi
 elif [ $1 == "status" ]; then
-    if [ $isactive = 1 ]; then
-        echo 󰦜
+    if [ $isactive == 1 ]; then
+        if [ $2 == "heimnetz" ]; then
+            echo 󱩇
+        else
+            echo 󰦜
+        fi
     else
-        echo 󰒙
+        if [ $2 == "heimnetz" ]; then
+            echo 󰳋
+        else
+            echo 󰒙
+        fi
     fi
 fi

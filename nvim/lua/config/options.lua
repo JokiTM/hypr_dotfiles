@@ -40,9 +40,13 @@ vim.cmd [[
   highlight NonText ctermbg=none
 ]]
 
-
-vim.opt_local.spell = true
-vim.opt_local.spelllang = { "de" , "en"}
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "vimwiki", "text" },
+  callback = function()
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = { "de" , "en"}
+  end,
+})
 
 vim.api.nvim_create_autocmd("BufEnter", {
   callback = function()

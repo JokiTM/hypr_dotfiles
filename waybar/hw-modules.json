@@ -13,29 +13,29 @@
         "interval": 5,
         "format": "   {}%",
         "max-length": 10,
-        "on-click": "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"sysmon\")'"
+        "on-click": "wtype -M ctrl -M shift -P escape"
     },
     "custom/gpu": {
         "interval": 5,
         "format": "󰾲   {}%",
         "exec": "~/.config/waybar/scripts/test.sh",
         "max-length": 10,
-        "on-click": "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"sysmon\")'"
+        "on-click": "wtype -M ctrl -M shift -P escape"
     },
     "custom/vram": {
         "interval": 5,
         "format": "{} GiB Used",
         "exec": "~/.config/waybar/scripts/gpu.sh vram",
-        "on-click": "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"sysmon\")'"
+        "on-click": "wtype -M ctrl -M shift -P escape"
     },
     "custom/gpu-temp": {
         "exec": "~/.config/waybar/scripts/gpu.sh temp",
         "interval": 5,
-        "on-click": "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"sysmon\")'"
+        "on-click": "wtype -M ctrl -M shift -P escape"
     },
     "custom/mouse": {
         "exec": "~/.config/waybar/scripts/mouse.sh",
-        "on-click": "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"sysmon\")'",
+        "on-click": "wtype -M ctrl -M shift -P escape",
         "interval": 60
     },
     "group/cpu": {

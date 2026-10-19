@@ -116,7 +116,7 @@
         "exec": "ls ~/.cache/rmpcd/albumart/*",
         "size": 24,
         "interval": 1,
-        "on-click":  "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"music\")'",
+        "on-click":  "wtype -M win m",
         "on-click-right": "~/.config/waybar/scripts/viewcover.sh",
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous"

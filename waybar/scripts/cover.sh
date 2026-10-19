@@ -6,7 +6,7 @@ if [[ "$stat" = "No players found" ]]; then
     echo " "
     exit 1
 elif [[ $stat = "Paused" ]]; then
-    printf "/tmp/rmpcd-cover-art\n/tmp/rmpcd-cover-art"
+    printf "$(ls ~/.cache/rmpcd/albumart/*)"
     exit 0
 elif [[ $stat = "Stopped" ]]; then
     printf "         \n"

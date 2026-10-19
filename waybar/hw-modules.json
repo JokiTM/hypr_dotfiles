@@ -34,7 +34,6 @@
         "on-click": "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"sysmon\")'"
     },
     "custom/mouse": {
-        "format": "󰍽  {}%",
         "exec": "~/.config/waybar/scripts/mouse.sh",
         "on-click": "hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"sysmon\")'",
         "interval": 60

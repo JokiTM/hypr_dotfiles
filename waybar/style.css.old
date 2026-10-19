@@ -1,0 +1,192 @@
+@import "/home/mathis/.cache/wal/colors-waybar.css";
+
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 17px;
+  min-height: 0;
+}
+
+window#waybar > box {
+    padding: 0px 0px 5px 0px; /* Top/Bottom Left/Right */
+}
+
+#waybar {
+  background: transparent;
+  color: @color0;
+  margin: 5px 5px;
+}
+
+tooltip {
+  background: @color0;
+  color: @color5;
+  border: 1px solid @color5;
+}
+
+tooltip label {
+  color: @color5;
+}
+
+#workspaces,
+#tags {
+  border-radius: 1rem;
+  margin: 5px;
+  background-color: @color0;
+  margin-left: 1.0rem;
+}
+
+#workspaces button,
+#tags button {
+  color: @color1;
+  border-radius: 1rem;
+  padding: 0.4rem;
+}
+
+#workspaces button.active,
+#tags button.focused {
+  color: @color7;
+  border-radius: 1rem;
+}
+
+#tags button.urgent {
+  color: @color5;
+}
+
+#workspaces button:hover,
+#tags button:hover {
+  color: @color16;
+  background: none;
+  box-shadow: none;
+  border-color: transparent;
+  text-shadow: none;
+  transition: none; /* Disable predefined animations */
+}
+
+
+#custom-music,
+#tray,
+#battery,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#custom-lock,
+#custom-vpn,
+#cpu,
+#temperature.cpu,
+#memory,
+#mpris,
+#image,
+#custom-gpu,
+#custom-gpu-temp,
+#custom-vram,
+#custom-mouse,
+#submap,
+#network,
+#custom-power,
+menu {
+  background-color: @color0;
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
+}
+
+#mpris.icon,
+#battery,
+#custom-mouse {
+    color: @color5;
+    border-radius: 0px 1rem 1rem 0px;
+}
+#clock {
+  color: @color5;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 5px;
+}
+
+#network,
+#pulseaudio {
+  color: @color5;
+  border-radius: 0rem 0px 0px 0rem;
+}
+
+#image,
+#cpu,
+#custom-vpn{
+    border-radius: 1rem 0px 0px 1rem;
+    color: @color5;
+}
+
+#mpris.long.paused,
+#mpris.short.paused, 
+#mpris.long.playing,
+#mpris.short.playing {
+    color: @color5;
+    border-radius: 0px 0rem 0rem 0px;
+}
+
+#image.empty {
+    background: transparent;
+    border-radius: 1rem 0px 0px 1rem;
+}
+
+#temperature.cpu {
+  color: @maroon;
+    border-radius: 0px 0rem 0rem 0px;
+}
+
+#memory {
+    color: @color5;
+    border-radius: 0px 0rem 0rem 0px;
+}
+
+#custom-gpu {
+    color: @color5;
+    border-radius: 0px 0rem 0rem 0px;
+}
+
+#custom-gpu-temp,
+#custom-vram{
+  color: @maroon;
+    border-radius: 0px 0rem 0rem 0px;
+}
+
+
+#custom-lock {
+    border-radius: 1rem 0px 0px 1rem;
+    color: @color5;
+}
+
+#submap {
+  color: @color5;
+  border-radius: 1rem;
+  margin-left: 1rem;
+}
+
+#custom-power
+{
+    margin-right: 1rem;
+    border-radius: 0px 1rem 1rem 0px;
+    color: @color5;
+}
+
+menu {
+    border-radius: 1rem 1rem 1rem 1rem;
+    color: @color5;
+}
+
+#tray {
+    margin-right: 5px;
+    border-radius: 1rem;
+    color: @color5;
+}
+#tray menu{
+    color: @color5;
+    background: @background;
+}
+#tray > .active {
+    color: @color5;
+}
+#tray > .passive {
+    color: @color5;
+}
+#tray > .needs-attention{
+    color: @color5;
+}

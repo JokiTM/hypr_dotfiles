@@ -28,6 +28,9 @@ exec = "chafa --size=${YAZI_PREVIEW_COLUMNS}x${YAZI_PREVIEW_LINES} $FILE"
     { run = "swayimg -g $(dirname %s)", desc = "Open Gallery", for = "linux" },
     #{ run = "vlc %s", desc = "vlc", for = "linux" },
   ]
+  manga = [
+    { run = "zathura %s", desc = "Open in zathura", for = "linux" },
+  ]
 
 [open]
   prepend_rules = [
@@ -35,6 +38,7 @@ exec = "chafa --size=${YAZI_PREVIEW_COLUMNS}x${YAZI_PREVIEW_LINES} $FILE"
     { mime = "video/*", use = [ "video" ] },
     { mime = "audio/*", use = [ "audio" ] },
     { mime = "image/*", use = [ "image" ] },
+    { url = "*.cbz",    use = [ "manga" ] },
   ]
 
 [plugin]

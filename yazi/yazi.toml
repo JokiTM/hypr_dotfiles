@@ -3,14 +3,6 @@ linemode = "size"
 
 [preview]
 cache_dir = "~/.cache/yazi"
-max_width = 1920
-max_height = 1080
-quality = 100
-preload = true
-
-[[preview.preloaders]]
-mime = "image/*"
-exec = "chafa --size=${YAZI_PREVIEW_COLUMNS}x${YAZI_PREVIEW_LINES} $FILE"
 
 [opener]
   video = [
@@ -20,13 +12,11 @@ exec = "chafa --size=${YAZI_PREVIEW_COLUMNS}x${YAZI_PREVIEW_LINES} $FILE"
   ]
   audio = [
     { run = "mpv %s", desc = "mpv", for = "linux" },
-    #{ run = "vlc %s", desc = "vlc", for = "linux" },
   ]
   image = [
-    { run = "swayimg %s", desc = "mpv", for = "linux" },
+    { run = "swayimg %s", desc = "swayimg", for = "linux" },
     { run = "wallpaper %s", desc = "Set Wall", for = "linux" },
     { run = "swayimg -g $(dirname %s)", desc = "Open Gallery", for = "linux" },
-    #{ run = "vlc %s", desc = "vlc", for = "linux" },
   ]
   manga = [
     { run = "zathura %s", desc = "Open in zathura", for = "linux" },

@@ -30,7 +30,7 @@ require("simple-tag"):setup({
 	  ["!"] = "#cc9057",
 	  ["1"] = "cyan",
 	  ["p"] = "red",
-	  ["w"] = "red",
+	  ["w"] = "yellow",
   },
 
   -- Set tag icons. Only show when ui_mode = "icon".

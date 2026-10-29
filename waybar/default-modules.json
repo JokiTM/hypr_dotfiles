@@ -20,6 +20,9 @@
     "dwl/tags": {
         "hide-vacant": true
     },
+    "dwl/window": {
+        "format": "{title} | {app_id}"
+    },
     "tray": {
         "icon-size": 21,
         "spacing": 10

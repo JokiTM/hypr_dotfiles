@@ -83,6 +83,7 @@ menu {
 
 #mpris.icon,
 #battery,
+#window,
 #custom-mouse {
     color: @color5;
 }

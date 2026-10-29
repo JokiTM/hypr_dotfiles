@@ -13,25 +13,25 @@
         "interval": 5,
         "format": "   {}%",
         "max-length": 10,
-        "on-click": "wtype -M ctrl -M shift -P escape"
+        "on-click": "wtype -M ctrl -M shift -P escape -m ctrl -m shift"
     },
     "custom/gpu": {
         "interval": 5,
         "format": "󰾲   {}%",
         "exec": "~/.config/waybar/scripts/test.sh",
         "max-length": 10,
-        "on-click": "wtype -M ctrl -M shift -P escape"
+        "on-click": "wtype -M ctrl -M shift -P escape -m ctrl -m shift"
     },
     "custom/vram": {
         "interval": 5,
         "format": "{} GiB Used",
         "exec": "~/.config/waybar/scripts/gpu.sh vram",
-        "on-click": "wtype -M ctrl -M shift -P escape"
+        "on-click": "wtype -M ctrl -M shift -P escape -m ctrl -m shift"
     },
     "custom/gpu-temp": {
         "exec": "~/.config/waybar/scripts/gpu.sh temp",
         "interval": 5,
-        "on-click": "wtype -M ctrl -M shift -P escape"
+        "on-click": "wtype -M ctrl -M shift -P escape -m ctrl -m shift"
     },
     "custom/mouse": {
         "exec": "~/.config/waybar/scripts/mouse.sh",

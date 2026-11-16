@@ -54,7 +54,7 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i, follow = false}))
     hl.bind(mainMod .. " + SHIFT + CONTROL + " .. key,     hl.dsp.window.move({ workspace = i, follow = true}))
     if not laptop then
-        local mon = (i < 6 and "DP-3" or "DP-1")
+        local mon = (i < 6 and "DP-1" or "DP-2")
         hl.workspace_rule({ workspace = tostring(i), monitor = mon });
     end
 end

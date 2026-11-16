@@ -14,7 +14,7 @@ unset counter var
 cat << EOF > $MAKOCONFIG
 
 max-visible=10
-layer=top
+layer=overlay
 font=JetBrainsMono Nerd Font 11
 background-color=#4c566add
 border-radius=7

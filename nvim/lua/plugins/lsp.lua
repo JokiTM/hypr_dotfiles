@@ -69,4 +69,12 @@ vim.lsp.config('lua_ls', {
     }
   })
 
-vim.lsp.enable({ 'lua_ls', 'clangd', 'rust_analyzer', 'bashls' })
+  vim.lsp.config('gopls', {
+      settings = {
+          gopls = {
+              semanticTokens = false
+          }
+      }
+  })
+  vim.lsp.enable({ 'lua_ls', 'clangd', 'rust_analyzer', 'bashls', 'termux_language_server', 'gopls'})
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to definition' })

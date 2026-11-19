@@ -22,4 +22,5 @@ rsync -ah --info=progress2 ~/Books/ ~/Nas/Medien/Books/
 wtfamisyncing=pics
 echo "Syncing pics..." 
 rsync -ah --info=progress2 --exclude nsfw --exclude sexyanime --exclude LukePaper --exclude gifs ~/Pictures/Wallpapers/ ~/Nas/Medien/Fotos/Wallpapers
-rsync -ah --info=progress2 --exclude Wallpapers ~/Pictures/Fotos/ ~/Nas/Medien/Fotos/
+rsync -ahu --info=progress2 --exclude Wallpapers ~/Pictures/Fotos/ ~/Nas/Medien/Fotos/
+rsync -ahu --info=progress2 --exclude Wallpapers ~/Nas/Medien/Fotos/ ~/Pictures/Fotos/

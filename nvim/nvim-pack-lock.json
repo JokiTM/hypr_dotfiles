@@ -44,6 +44,10 @@
       "rev": "40aedd8a68c78a656a10a8d62d80c54af59420fb",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
     },
+    "vimtex": {
+      "rev": "cedc0a172e40d0d1d49670dd0d936d6e2df61de7",
+      "src": "https://github.com/lervag/vimtex"
+    },
     "vimwiki": {
       "rev": "a54a3002e229c4b43d69ced170ff77663a5b2c40",
       "src": "https://github.com/vimwiki/vimwiki"

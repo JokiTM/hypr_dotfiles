@@ -77,8 +77,8 @@
         "player": "mpd",
         "format": "<i>{dynamic}</i>",
         "dynamic-order": ["title", "{dynamic-seperator}", "artist"],
-        "on-click": "~/.config/waybar/scripts/media.sh",
-        "on-click-right": "playerctl play-pause",
+        "on-click": "playerctl play-pause -p mpd",
+        "on-click-right": "playerctl -i mpd play-pause",
         "on-scroll-up": "playerctl -p mpd volume .05+",
         "on-scroll-down": "playerctl -p mpd volume .05-",
     },
@@ -86,32 +86,21 @@
         "format": "<i>{title}</i>",
         "player": "mpd",
         "max-length": 60,
-        "player-icons": {
-            "default": "▶",
-            "mpv": "🎵"
-        },
-        "status-icons": {
-            "playing": "",
-            "paused": ""
-        },
-        "on-click": "~/.config/waybar/scripts/media.sh",
-        "on-click-right": "playerctl play-pause",
+        "on-click": "playerctl play-pause -p mpd",
+        "on-click-right": "playerctl -i mpd play-pause",
         "on-scroll-up": "playerctl -p mpd volume .05+",
         "on-scroll-down": "playerctl -p mpd volume .05-",
     },
     "mpris#icon": {
+        "player": "mpd",
         "format": "{status_icon}",
         "max-length": 60,
-        "player-icons": {
-            "default": "▶",
-            "mpv": "🎵"
-        },
         "status-icons": {
             "playing": "",
             "paused": ""
         },
-        "on-click": "~/.config/waybar/scripts/media.sh",
-        "on-click-right": "playerctl play-pause",
+        "on-click": "playerctl play-pause -p mpd",
+        "on-click-right": "playerctl -i mpd play-pause",
         "on-scroll-up": "playerctl -p mpd volume .05+",
         "on-scroll-down": "playerctl -p mpd volume .05-",
     },

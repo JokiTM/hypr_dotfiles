@@ -108,7 +108,7 @@
         "exec": "ls ~/.cache/rmpcd/albumart/*",
         "size": 24,
         "interval": 1,
-        "on-click":  "wtype -M win m",
+        "on-click":  "wtype -M win m -m win",
         "on-click-right": "~/.config/waybar/scripts/viewcover.sh",
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous"

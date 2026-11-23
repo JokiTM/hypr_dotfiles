@@ -11,9 +11,10 @@ clutter:
   - "*.cue"
   - "*.log"
   - "*.m3u"
-plugins: musicbrainz replaygain fetchart lastgenre info missing ftintitle edit convert
+  - "*.txt"
+plugins: musicbrainz replaygain fetchart lastgenre info missing ftintitle edit convert fromfilename
 replaygain:
-    threads: 32
+    threads: 16
     backend: ffmpeg
     auto: yes
     overwrite: yes
@@ -23,6 +24,8 @@ fetchart:
 ftintitle:
     auto: yes
     drop: yes
+    custom_words:
+      - "feat"
 lyrics:
   auto: yes
   synced: yes
@@ -30,3 +33,7 @@ lyrics:
 lastgenre:
   auto: yes
   canonical: yes
+paths:
+    default: $album_artist_no_feat/$album%aunique{}/$track $title
+    singleton: Non-Album/$artist/$title
+    comp: Compilations/$album%aunique{}/$track $title

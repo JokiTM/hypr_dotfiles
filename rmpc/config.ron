@@ -147,21 +147,6 @@
         album_sort_by: Date,
         album_date_tags: [OriginalDate],
     ),
-    components: {
-    "logo": Split(
-        direction: Vertical,
-        panes: [
-            ( size: "1", pane: Pane(Property(content: [(kind: Text("test"))])) ),
-        ],
-    ),
-    "state": Pane(Property(
-        content: [
-            (kind: Text("["), style: (fg: "yellow", modifiers: "Bold")),
-            (kind: Property(Status(StateV2())), style: (fg: "yellow", modifiers: "Bold")),
-            (kind: Text("]"), style: (fg: "yellow", modifiers: "Bold")),
-        ], align: Left,
-    )),
-    },    
     tabs: [
         (
             name: "Playing",
@@ -182,19 +167,19 @@
                                          size: "14%",
                                          pane: Pane(Empty()),
                                          borders: "LEFT|TOP",
-                                         border_symbols: Rounded,
+                                         border_symbols: Plain,
                                         ),
                                         (
                                          size: "72%",
                                          pane: Pane(AlbumArt),
                                          borders: "TOP",
-                                         border_symbols: Rounded,
+                                         border_symbols: Plain,
                                         ),
                                         (
                                          size: "14%",
                                          pane: Pane(Empty()),
                                          borders: "RIGHT|TOP",
-                                         border_symbols: Rounded,
+                                         border_symbols: Plain,
                                         )
                                         ]
                                     )
@@ -203,13 +188,13 @@
                                     size: "5%",
                                     pane: Pane(Empty()),
                                     borders: "LEFT|RIGHT",
-                                    border_symbols: Rounded,
+                                    border_symbols: Plain,
                                 ),
                                 (
                                     size: "30%",
                                     pane: Pane(Lyrics),
                                     borders: "BOTTOM|LEFT|RIGHT",
-                                    border_symbols: Rounded,
+                                    border_symbols: Plain,
                                 ),
                             ],
                         ),
@@ -232,7 +217,7 @@
                                                 size: "100%",
                                                 pane: Pane(QueueHeader()),
                                                 borders: "TOP|LEFT|RIGHT",
-                                                border_symbols: Rounded,
+                                                border_symbols: Plain,
                                             ),
                                         ]
                                     )
@@ -250,7 +235,7 @@
                                                 size: "100%",
                                                 pane: Pane(Queue),
                                                 borders: "BOTTOM|LEFT|RIGHT",
-                                                border_symbols: Rounded,
+                                                border_symbols: Plain,
                                             ),
                                         ]
                                     )
@@ -271,7 +256,7 @@
                  pane: Pane(AlbumArtists),
                  size: "100%",
                  borders: "ALL",
-                 border_symbols: Rounded,
+                 border_symbols: Plain,
                 )
                 ],
                 )
@@ -286,7 +271,7 @@
                  pane: Pane(Albums),
                  size: "100%",
                  borders: "ALL",
-                 border_symbols: Rounded,
+                 border_symbols: Plain,
                 )],
             )
         ),
@@ -300,7 +285,7 @@
                  pane: Pane(Playlists),
                  size: "100%",
                  borders: "ALL",
-                 border_symbols: Rounded,
+                 border_symbols: Plain,
                 )],
             )
         ),
@@ -323,16 +308,26 @@
               pane: Split( 
                   direction: Vertical,
                   panes: [ 
-                  (pane: Pane(AlbumArt), size: "40%"),
-                  (pane: Component("state"), size: "60%"),
+                  (pane: Pane(AlbumArt), size: "60%"),
+                  (pane: Pane(Empty()), size: "5%"),
+                  (
+                   size: "100%",
+                   pane: Split(
+                               direction: Horizontal,
+                               panes: [ 
+                                   (pane: Pane(Empty()), size: "30%"),
+                                   (pane: Component("artix"), size: "70%"),
+                               ]
+                              ),
+                  ),
+                  (pane: Pane(Empty()), size: "5%"),
+
                   ],
                   ),
              ),
              ( pane: Pane(Lyrics), size: "70%"),
              ],
              )
-        ),
-    ],
-),        ),
+         ),
     ],
 )

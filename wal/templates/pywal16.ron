@@ -191,4 +191,37 @@
                          default: (kind: Property(Filename))
                         ),
                     ],
+    components: {{
+    "logo": Split(
+        direction: Vertical,
+        panes: [
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("test"))])) ),
+        ],
+    ),
+    "artix": Split(
+        direction: Vertical,
+        panes: [
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"))])) ),
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"))])) ),
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"))])) ),
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"))])) ),
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀"))])) ),
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⡀⠀⠀⠀⠀⠙⢿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀"))])) ),
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣷⣶⣤⣄⡀⠀⠈⠛⢷⡄⠀⠀⠀⠀⠀⠀⠀"))])) ),
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⡄⠀⠀⠀⠀⠀⠀⠀⠀"))])) ),
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠁⠀⢀⣤⡄⠀⠀⠀⠀⠀"))])) ),
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⠿⠿⠛⠉⠀⠀⢀⣀⣴⣾⣿⣿⣿⣆⠀⠀⠀⠀"))])) ),
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("⠀⠀⠀⣴⣿⣿⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠘⠛⢿⣿⣿⣿⣿⣿⣆⠀⠀⠀"))])) ),
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("⠀⢀⣾⡟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠻⠿⣿⣿⣷⡀⠀"))])) ),
+            ( size: "1", pane: Pane(Property(content: [(kind: Text("⣠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠻⣄"))])) ),
+        ],
+    ),
+    "state": Pane(Property(
+        content: [
+            (kind: Text("["), style: (fg: "yellow", modifiers: "Bold")),
+            (kind: Property(Status(StateV2())), style: (fg: "yellow", modifiers: "Bold")),
+            (kind: Text("]"), style: (fg: "yellow", modifiers: "Bold")),
+        ], align: Left,
+    )),
+    }},
                     )

@@ -78,3 +78,5 @@ vim.lsp.config('lua_ls', {
   })
   vim.lsp.enable({ 'lua_ls', 'clangd', 'rust_analyzer', 'bashls', 'termux_language_server', 'gopls'})
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to definition' })
+vim.keymap.set('n', '<M-j>', ':cnext<CR>', { desc = 'Go to definition' })
+vim.keymap.set('n', '<M-k>', ':cprev<CR>', { desc = 'Go to definition' })

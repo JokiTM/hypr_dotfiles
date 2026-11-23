@@ -14,6 +14,3 @@ hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
 hl.env("QT_QPA_PLATFORMTHEME", "xdgdesktopportal")
 hl.env("GDK_DEBUG", "portals")
 hl.env("GTK_USE_PORTAL", "1")
-
-
-hl.env("SVDIR", "$HOME/service")

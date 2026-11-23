@@ -3,7 +3,6 @@
 ---------------------
 
 local helpers = require('conf.helpers')
-local laptop = helpers.isSet("LAPTOP")
 
 hl.config({
     binds = {
@@ -53,18 +52,15 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
     hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i, follow = false}))
     hl.bind(mainMod .. " + SHIFT + CONTROL + " .. key,     hl.dsp.window.move({ workspace = i, follow = true}))
-    if not laptop then
-        local mon = (i < 6 and "DP-1" or "DP-2")
-        hl.workspace_rule({ workspace = tostring(i), monitor = mon });
-    end
+    hl.workspace_rule({ workspace = tostring(i)});
 end
 
 hl.bind(mainMod .. " + M",         hl.dsp.workspace.toggle_special("music"))
-hl.workspace_rule({ workspace = "special:music", on_created_empty = "foot -T rmpc zsh -c '~/.config/hypr/scripts/dispatch.sh rmpc'" })
+hl.workspace_rule({ workspace = "special:music", on_created_empty = "spotify" })
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.window.move({ workspace = "special:music" }))
 
 hl.bind(mainMod .. " + C",         hl.dsp.workspace.toggle_special("whatsapp"))
-hl.workspace_rule({ workspace = "special:whatsapp", on_created_empty = "librewolf --new-window https://web.whatsapp.com" })
+hl.workspace_rule({ workspace = "special:whatsapp", on_created_empty = "firefox --new-window https://web.whatsapp.com" })
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.window.move({ workspace = "special:whatsapp" }))
 
 hl.bind("CONTROL + SHIFT + ESCAPE", hl.dsp.workspace.toggle_special("sysmon"))
@@ -83,10 +79,8 @@ hl.bind(mainMod .. " + X", hl.dsp.window.resize(), { mouse = true })
 -- Laptop multimedia keys for volume and LCD brightness
 local lowerVol = hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
 local higherVol = hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),      { locked = true, repeating = true })
-if not laptop then
-    lowerVol:set_enabled(false)
-    higherVol:set_enabled(false)
-end
+lowerVol:set_enabled(false)
+higherVol:set_enabled(false)
 hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),     { locked = true, repeating = true })
 hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),                  { locked = true, repeating = true })

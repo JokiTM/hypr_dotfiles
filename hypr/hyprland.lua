@@ -30,7 +30,7 @@ require('conf.plugins')
 ---- LOOK AND FEEL ----
 -----------------------
 
-local colors = require("/home/mathis/.cache/wal/colors.lua")
+local colors = require( os.getenv("HOME") .. "/.cache/wal/colors.lua")
 
 hl.config({
     general = {
@@ -165,7 +165,7 @@ hl.config({
 
 hl.config({
     input = {
-        kb_layout  = "de",
+        kb_layout  = "ch",
         kb_variant = "",
         kb_model   = "",
         kb_options = "",
